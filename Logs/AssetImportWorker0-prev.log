@@ -1,0 +1,772 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.39f1 (fd6670bb8be9) revision 16606832'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'ko' Physical Memory: 15731 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.39f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/hyeon/Desktop/hyeon/UnityProject/IUCP/IUC2TowerDefense2D
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60078
+Successfully changed project path to: C:/Users/hyeon/Desktop/hyeon/UnityProject/IUCP/IUC2TowerDefense2D
+C:/Users/hyeon/Desktop/hyeon/UnityProject/IUCP/IUC2TowerDefense2D
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 47.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.39f1 (fd6670bb8be9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/hyeon/Desktop/hyeon/UnityProject/IUCP/IUC2TowerDefense2D/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:   
+    VRAM:     5980 MB
+    Driver:   31.0.15.1659
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56972
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001691 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 44.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.524 seconds
+Domain Reload Profiling:
+	ReloadAssembly (524ms)
+		BeginReloadAssembly (55ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (404ms)
+			LoadAssemblies (53ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (128ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (158ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (44ms)
+				BeforeProcessingInitializeOnLoad (15ms)
+				ProcessInitializeOnLoadAttributes (69ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002778 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 44.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.002 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1003ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (812ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (259ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (326ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (45ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (174ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2413 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.8 MB.
+System memory in use after: 106.0 MB.
+
+Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 2842.
+Total: 3.722400 ms (FindLiveObjects: 0.272300 ms CreateObjectMapping: 0.110900 ms MarkObjects: 3.260700 ms  DeleteObjects: 0.077400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/TileWall.prefab
+  artifactKey: Guid(fd6a1496302005c4c9feba957a9e3c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/TileWall.prefab using Guid(fd6a1496302005c4c9feba957a9e3c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b178e9246fe238e77243988230daae2b') in 0.082481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Prefabs/WayPoint Brush.asset
+  artifactKey: Guid(2c4bcad8661980444a34e3891d51fe7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WayPoint Brush.asset using Guid(2c4bcad8661980444a34e3891d51fe7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '358d6f36605f71e4ea021bb3c9c5fa73') in 0.010774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Prefabs/FollowTower.prefab
+  artifactKey: Guid(fdd26b28062494c4b8176f9f9077305d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/FollowTower.prefab using Guid(fdd26b28062494c4b8176f9f9077305d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3179a51bf35b23c203dc7267f11871fc') in 0.018421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Prefabs/Enemy03.prefab
+  artifactKey: Guid(63143bbfee26b8a45b6043c7ada502cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy03.prefab using Guid(63143bbfee26b8a45b6043c7ada502cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5281e96412357f9296acba8826fea83') in 0.011336 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/Prefabs/Tower01Cannon.asset
+  artifactKey: Guid(1333a1c107a0033409484e8c35900c58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower01Cannon.asset using Guid(1333a1c107a0033409484e8c35900c58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '758afa29f8b6b78fbe7753fb655f5c5a') in 0.009694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Prefabs/Enemy02.prefab
+  artifactKey: Guid(81d6e119cc08bed40a68fa0d0d7b7ec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy02.prefab using Guid(81d6e119cc08bed40a68fa0d0d7b7ec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f271ae2f8c931129e8d72f7c963fb7c6') in 0.013040 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Prefabs/Tower04.prefab
+  artifactKey: Guid(698b30cd34282644fbd365bd9ed0ed6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower04.prefab using Guid(698b30cd34282644fbd365bd9ed0ed6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b121c7104fbe593ab9019b6af707dc76') in 0.018261 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Prefabs/Tower04Buff.asset
+  artifactKey: Guid(481b87e3bc97c844cb665ba548ed931a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower04Buff.asset using Guid(481b87e3bc97c844cb665ba548ed931a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7088dbc9eff58ecb28e074619fe99cf6') in 0.008823 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Prefabs/Enemy05.prefab
+  artifactKey: Guid(47e28ca436aefab47a71fbaf8d75dbc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy05.prefab using Guid(47e28ca436aefab47a71fbaf8d75dbc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf115f83bacd27ce696b6e5889264326') in 0.014571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Prefabs/WayPoint.prefab
+  artifactKey: Guid(59ff0b8151b6a8e439f3efb79f1c5d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WayPoint.prefab using Guid(59ff0b8151b6a8e439f3efb79f1c5d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b50b46d30b961a6d30e26194ddb06a2') in 0.007757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Prefabs/Tower01.prefab
+  artifactKey: Guid(424afacae9dc70f44a75b8617dfb2d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower01.prefab using Guid(424afacae9dc70f44a75b8617dfb2d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8380d4d6fdf2c6906b44f93c04b2df9') in 0.014523 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Prefabs/StageTiles.prefab
+  artifactKey: Guid(8f702b1c6978d7e49bff81c6a6c8418a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/StageTiles.prefab using Guid(8f702b1c6978d7e49bff81c6a6c8418a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dc7407abc2ea80ecb6565160837f368') in 0.022394 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Prefabs/TowerBullet01.prefab
+  artifactKey: Guid(82da08dbc1cf1a14499cc017f331399d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/TowerBullet01.prefab using Guid(82da08dbc1cf1a14499cc017f331399d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e80f5dda16979f9bfef77d0981d7ec6') in 0.013378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Prefabs/Tower02Laser.asset
+  artifactKey: Guid(4070589baa0e6fe499bc3a68e2d3a59a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower02Laser.asset using Guid(4070589baa0e6fe499bc3a68e2d3a59a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11114c77a5245619af5c1e4af50eb179') in 0.009507 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Prefabs/Tower03Slow.asset
+  artifactKey: Guid(03765b787f17b6f409346bbf9cf26dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower03Slow.asset using Guid(03765b787f17b6f409346bbf9cf26dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '604b4eecdf42df22f808364a7e90387f') in 0.011382 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Prefabs/FollowTower 3.prefab
+  artifactKey: Guid(76d543a6fb9f95f43b365b13222c5757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/FollowTower 3.prefab using Guid(76d543a6fb9f95f43b365b13222c5757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0be851a627ac6bd1761bf4e5fcec3948') in 0.014542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Prefabs/FollowTower 4.prefab
+  artifactKey: Guid(2b6f6bb24c0806c4abadf6532cc9ef69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/FollowTower 4.prefab using Guid(2b6f6bb24c0806c4abadf6532cc9ef69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14e837e2bec6fcb2cc74f971e73fdb50') in 0.014572 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Prefabs/Enemy04.prefab
+  artifactKey: Guid(c05bd2e3ab2ba844286b90cde56576c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy04.prefab using Guid(c05bd2e3ab2ba844286b90cde56576c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dee18e3131ee23230e37c1452d5a6cab') in 0.013023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Prefabs/FollowTower 2.prefab
+  artifactKey: Guid(014e54b6d62166f45a0fbe22c38b528f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/FollowTower 2.prefab using Guid(014e54b6d62166f45a0fbe22c38b528f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a337e56e91d94a39dae85b2ad357347c') in 0.013691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Prefabs/Tower03.prefab
+  artifactKey: Guid(ff0d9baf6cff3cf4482f104ce53d3722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower03.prefab using Guid(ff0d9baf6cff3cf4482f104ce53d3722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76f9a1a1d3c96db5ffac2b547c10ba36') in 0.015250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Prefabs/SliderEnemyHP.prefab
+  artifactKey: Guid(d0cc68f4e65e6324595b9a434d56a4a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/SliderEnemyHP.prefab using Guid(d0cc68f4e65e6324595b9a434d56a4a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e276bac7b38042e852dec95f5cd822b4') in 0.018506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/Prefabs/Tile Wall Brush.asset
+  artifactKey: Guid(504405931db79eb4aada9ee6f02bbb72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tile Wall Brush.asset using Guid(504405931db79eb4aada9ee6f02bbb72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39f59a396a0ed8d4b09b510e39f32229') in 0.007455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Prefabs/Tower02.prefab
+  artifactKey: Guid(c6e41eac2676aaa4cbcfe9977e0be5f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower02.prefab using Guid(c6e41eac2676aaa4cbcfe9977e0be5f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90b1b6612b53588f1021f3dd433db361') in 0.017746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Prefabs/Enemy01.prefab
+  artifactKey: Guid(56cff715518b97f409c42907c6df7c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy01.prefab using Guid(56cff715518b97f409c42907c6df7c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfcb7c34f0d85011fc070c3d5ecc9f75') in 0.012351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.832781 seconds.
+  path: Assets/Tiles/TileGoal.asset
+  artifactKey: Guid(18910bebb4b54954fbfa3e8493f9f321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TileGoal.asset using Guid(18910bebb4b54954fbfa3e8493f9f321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad77bb3f2b7edbbd5b3aa39634205b63') in 0.007499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Tiles/TileStart.asset
+  artifactKey: Guid(bf90da665914f6449999a15040215a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TileStart.asset using Guid(bf90da665914f6449999a15040215a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '437d522899d9f9f4836702e2408a72cd') in 0.003153 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Tiles/TileRoads.asset
+  artifactKey: Guid(11d08c02a0635bf47aa6ee1a4ab041c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TileRoads.asset using Guid(11d08c02a0635bf47aa6ee1a4ab041c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e611be6d91f3b9c4fcbc4ebad968a67c') in 0.032961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.837982 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad01.png
+  artifactKey: Guid(43ddd32dc7552ea48a47dc2f80bce271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad01.png using Guid(43ddd32dc7552ea48a47dc2f80bce271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6b8cd6c029ed4cd52af85fcefbb4114') in 0.038858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad03.png
+  artifactKey: Guid(6d41988e1ac3e2b4c834dcad2e38c050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad03.png using Guid(6d41988e1ac3e2b4c834dcad2e38c050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '663a47fd06bbb6570f724a0886231661') in 0.018750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad06.png
+  artifactKey: Guid(ed19c5a781294b848858834d6f9a8276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad06.png using Guid(ed19c5a781294b848858834d6f9a8276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcf587abfd21a50b68a1d3956667db18') in 0.013636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad04.png
+  artifactKey: Guid(eb8852c6cd4906340bee3e073d9ff2b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad04.png using Guid(eb8852c6cd4906340bee3e073d9ff2b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a2cb35526102e3e4d20e92bcd2e162') in 0.013728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad02.png
+  artifactKey: Guid(3dc04d72687b7dd4585df0eaae7c2f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad02.png using Guid(3dc04d72687b7dd4585df0eaae7c2f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b21cb9d4e18bdcc5688361f2e96eab8') in 0.014394 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad05.png
+  artifactKey: Guid(3329a0bd4c9a15744a2c2942cb1e1f90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/TileRoad05.png using Guid(3329a0bd4c9a15744a2c2942cb1e1f90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9e62293e5c244780e6d0c47584a4e40') in 0.015390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.143830 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/TileGoal.png
+  artifactKey: Guid(7f33e14d4aa3c2d40b6bbf29e09fce57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/TileGoal.png using Guid(7f33e14d4aa3c2d40b6bbf29e09fce57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '762948352c00637a2386aa465cd74a0f') in 0.013754 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.750836 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/TileStart.png
+  artifactKey: Guid(fc92ee016a63d6d4eb1a61f0de1ab65f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/TileStart.png using Guid(fc92ee016a63d6d4eb1a61f0de1ab65f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2abbdef647c93994eae6f2f01f17f228') in 0.013234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.918474 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/BuffEffect.png
+  artifactKey: Guid(b2ac5660c86e7dc41bf201b2891fd860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/BuffEffect.png using Guid(b2ac5660c86e7dc41bf201b2891fd860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa0cd2544ba4612c518dcaaf7b87387a') in 0.023435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/UI_Enemy.png
+  artifactKey: Guid(6ec78318d67fb944896915b4a4e2be29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/UI_Enemy.png using Guid(6ec78318d67fb944896915b4a4e2be29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977ca98a44a4ab27c62e1801000e94a5') in 0.019051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Enemy04.png
+  artifactKey: Guid(a465cc5fd5ddd994da0105f0979d4b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Enemy04.png using Guid(a465cc5fd5ddd994da0105f0979d4b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1796ce3ba21cf8664577f3760628ea9') in 0.015355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower03_Lv01.png
+  artifactKey: Guid(9aa6d6b998727234f83d187a46e61516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower03_Lv01.png using Guid(9aa6d6b998727234f83d187a46e61516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a44b9f0524c0fb643e4155581fa3da80') in 0.018703 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/UIPanelBackground.png
+  artifactKey: Guid(883833c736aacd14aaa46680e00ec2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/UIPanelBackground.png using Guid(883833c736aacd14aaa46680e00ec2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c19f1b8e297c50ec8bf18d47e447bf3') in 0.020127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower03_Lv02.png
+  artifactKey: Guid(d5ea4b78dd7eb0d41ac4a39d66715676) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower03_Lv02.png using Guid(d5ea4b78dd7eb0d41ac4a39d66715676) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c61e55f47f46ec360647de3ce13f1a4c') in 0.019230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/UI_Wave.png
+  artifactKey: Guid(89e9cc8b0c5b6c74da71b64c4ad20bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/UI_Wave.png using Guid(89e9cc8b0c5b6c74da71b64c4ad20bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '526aa8f611ab9834e2ae8e5ef2f4b238') in 0.022182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Projectile01.png
+  artifactKey: Guid(58ff9d8abd2e0bf4ea0626df858b75a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Projectile01.png using Guid(58ff9d8abd2e0bf4ea0626df858b75a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29b84d047a8de31651d50f186b7edbef') in 0.016499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Enemy01.png
+  artifactKey: Guid(4fdf6315e4aa9a04b886cb4f14118549) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Enemy01.png using Guid(4fdf6315e4aa9a04b886cb4f14118549) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f5ffbd5b03531c8454bee14507e8501') in 0.019017 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower01_Lv03.png
+  artifactKey: Guid(b5cb522c90d48d44f86dc734ea7d3031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower01_Lv03.png using Guid(b5cb522c90d48d44f86dc734ea7d3031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2934f6cefc1ad06de53ccb6f5c9408a') in 0.019639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/UI_Play.png
+  artifactKey: Guid(94a7aa065e75d304e8a7c75faab7dcab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/UI_Play.png using Guid(94a7aa065e75d304e8a7c75faab7dcab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08766d70cf503d6954b3f07910d75aa9') in 0.017403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/SlowEffect.png
+  artifactKey: Guid(ae2c5134eb6392a41813d06848a2c33d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/SlowEffect.png using Guid(ae2c5134eb6392a41813d06848a2c33d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fd7f5a26aed3c51088446b2d96135b2') in 0.021146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower01_Lv02.png
+  artifactKey: Guid(fce82680eddeffb43820ccbcd83c33ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower01_Lv02.png using Guid(fce82680eddeffb43820ccbcd83c33ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dc5e255843eebc081f358d2d1e24655') in 0.020619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower04_Lv01.png
+  artifactKey: Guid(f9d3ffbccc5a1b646bd2b2e526662fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower04_Lv01.png using Guid(f9d3ffbccc5a1b646bd2b2e526662fd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43057ef3909373ef71b52ca32b6643e8') in 0.019661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/UI_Life.png
+  artifactKey: Guid(d7bafcdcdf2d8bb43909bbad9be4becd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/UI_Life.png using Guid(d7bafcdcdf2d8bb43909bbad9be4becd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8150850f23b09f6921c48a82810c11e7') in 0.023489 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Enemy03.png
+  artifactKey: Guid(a9f400ef31156fc44a7ba0f01454d989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Enemy03.png using Guid(a9f400ef31156fc44a7ba0f01454d989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '584a1a5b54fc8df406474e42498a26c7') in 0.020126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower02_Lv02.png
+  artifactKey: Guid(060fea897ffd20f4eb8688106a6d80b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower02_Lv02.png using Guid(060fea897ffd20f4eb8688106a6d80b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f023815643aa210e94badd044068971') in 0.019031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower01_Lv01.png
+  artifactKey: Guid(fc8a560a08ec1534099359c542f38bad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower01_Lv01.png using Guid(fc8a560a08ec1534099359c542f38bad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94cc3a878cef4b44c28713e43f89267d') in 0.020355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/TowerAttackRange.png
+  artifactKey: Guid(368ac61fcc318e6419fc07019be20571) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/TowerAttackRange.png using Guid(368ac61fcc318e6419fc07019be20571) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c428067ea58973ca1caa923faf936d8') in 0.036613 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Enemy05.png
+  artifactKey: Guid(194b6fece4a42524eab786c2bed996cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Enemy05.png using Guid(194b6fece4a42524eab786c2bed996cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56b65b9d34a9f95cacb9cbb3aaeabea4') in 0.020862 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/TileWall.png
+  artifactKey: Guid(9db90a9214f7a5e41a149b2d3b0b7eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/TileWall.png using Guid(9db90a9214f7a5e41a149b2d3b0b7eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '508e08d64ea9938ecf2fb9b8a526cb6b') in 0.025205 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower04_Lv02.png
+  artifactKey: Guid(22206d22c74b5504fb52b88eaf74f354) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower04_Lv02.png using Guid(22206d22c74b5504fb52b88eaf74f354) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14344806169f685b15efdd2f76cda88c') in 0.026973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower02_Lv01.png
+  artifactKey: Guid(746ebb8c6548adf4fb3a7c7ce893f80f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower02_Lv01.png using Guid(746ebb8c6548adf4fb3a7c7ce893f80f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81521d4011fcb651bb393f33ba989bd1') in 0.024700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower04_Lv03.png
+  artifactKey: Guid(64bc6e8c3379e1244b403834497ff3c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower04_Lv03.png using Guid(64bc6e8c3379e1244b403834497ff3c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '365bea39d2f942a12ea26c85e0ff47c6') in 0.021889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/UITowerBorder.png
+  artifactKey: Guid(b1e7eb3a05c3d1446809e8b0ff102f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/UITowerBorder.png using Guid(b1e7eb3a05c3d1446809e8b0ff102f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57bfb4a1736bfe16d7f3153c73753b11') in 0.024494 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/LaserHitEffect.png
+  artifactKey: Guid(79211057d70289f459644b4da4092ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/LaserHitEffect.png using Guid(79211057d70289f459644b4da4092ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1be84e2edeb650a45c84016ed295d751') in 0.020141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower03_Lv03.png
+  artifactKey: Guid(e29b9edf7e9af9a4a82633657a5f999e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower03_Lv03.png using Guid(e29b9edf7e9af9a4a82633657a5f999e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c70c098f3c4e172100170ab107e81fbb') in 0.020344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Enemy02.png
+  artifactKey: Guid(32ad934ce35a8f54dbe8afec48838e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Enemy02.png using Guid(32ad934ce35a8f54dbe8afec48838e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b94600c834b635c8abaafe36547c16a') in 0.020292 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower02_Lv03.png
+  artifactKey: Guid(f1559654a30924148a698be04c26ddae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/Tower02_Lv03.png using Guid(f1559654a30924148a698be04c26ddae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96cf7cc74ecb94ca6a84db0fa5814454') in 0.019614 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Unity 2DGame Development [Tower Defense][Resources]/UI_Gold.png
+  artifactKey: Guid(45b80fae64b6a4442a113ee94004c7fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Unity 2DGame Development [Tower Defense][Resources]/UI_Gold.png using Guid(45b80fae64b6a4442a113ee94004c7fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de15f677fb1acedb78164288569e2612') in 0.017091 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.556013 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdddd331c3f1b7826858a8d92db67e39') in 0.033639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.703229 seconds.
+  path: Assets/TextMesh Pro/Resources/TMP Settings.asset
+  artifactKey: Guid(3f5b5dff67a942289a9defa416b206f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/TMP Settings.asset using Guid(3f5b5dff67a942289a9defa416b206f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80217e6c75f9d2e4957cbc8093faaf48') in 0.049124 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.038927 seconds.
+  path: Assets/Scripts/SliderPositionAutoSetter.cs
+  artifactKey: Guid(7341dc2c09f00c54ab516339112e4eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SliderPositionAutoSetter.cs using Guid(7341dc2c09f00c54ab516339112e4eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c49c37e7a86e4c2621ffad0378e16403') in 0.008941 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 110.619596 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce6a35c3cddc746e7501c0bd0ed6d4ce') in 0.010310 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.535770 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2eaaecc5d5c27f40a1cf0cee02d4d33') in 0.002876 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.671663 seconds.
+  path: Assets/Prefabs/Tower01.prefab
+  artifactKey: Guid(424afacae9dc70f44a75b8617dfb2d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower01.prefab using Guid(424afacae9dc70f44a75b8617dfb2d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa0f25dcaa31373b21fbc238774f46ba') in 0.014874 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.585193 seconds.
+  path: Assets/Prefabs/Tower01.prefab
+  artifactKey: Guid(424afacae9dc70f44a75b8617dfb2d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower01.prefab using Guid(424afacae9dc70f44a75b8617dfb2d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c17a58f341206cf3bf13d573f02ac09b') in 0.014157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 42.675086 seconds.
+  path: Assets/Prefabs/Tower03.prefab
+  artifactKey: Guid(ff0d9baf6cff3cf4482f104ce53d3722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tower03.prefab using Guid(ff0d9baf6cff3cf4482f104ce53d3722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a58209d589ae17a05ae72ee4fce08fa') in 0.014351 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002870 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.022 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1022ms)
+		BeginReloadAssembly (124ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (835ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (299ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (303ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (90ms)
+				ProcessInitializeOnLoadAttributes (186ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2388 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107.4 MB.
+System memory in use after: 107.6 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2930.
+Total: 3.902900 ms (FindLiveObjects: 0.337400 ms CreateObjectMapping: 0.139800 ms MarkObjects: 3.364900 ms  DeleteObjects: 0.059000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 5896.593584 seconds.
+  path: Assets/Scripts/EnemyBullet.cs
+  artifactKey: Guid(93ba8452b1d4407489bd30debb93af7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyBullet.cs using Guid(93ba8452b1d4407489bd30debb93af7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59de0802c5db9ccb96f9843c6d867611') in 0.011110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.767640 seconds.
+  path: Assets/Scripts/Enemy.cs
+  artifactKey: Guid(7b78bad530475f34ab81e429419d934b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy.cs using Guid(7b78bad530475f34ab81e429419d934b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f59460a1528bc84ad6b53031717da1d6') in 0.020339 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002530 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.936 seconds
+Domain Reload Profiling:
+	ReloadAssembly (936ms)
+		BeginReloadAssembly (106ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (769ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (271ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (280ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (171ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2388 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107.4 MB.
+System memory in use after: 107.6 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2933.
+Total: 3.640700 ms (FindLiveObjects: 0.281800 ms CreateObjectMapping: 0.116900 ms MarkObjects: 3.212900 ms  DeleteObjects: 0.027800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 597.999070 seconds.
+  path: Assets/Scripts/EnemyHP.cs
+  artifactKey: Guid(e88a2469d3ceaa042a6fd2999fb83de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyHP.cs using Guid(e88a2469d3ceaa042a6fd2999fb83de6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4666047f8cab55ab9a9f6261f2ac0dc7') in 0.009884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.240109 seconds.
+  path: Assets/Scripts/EnemyHPViewer.cs
+  artifactKey: Guid(9c1a1a1ed4d8bd145b6b4822668f12ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyHPViewer.cs using Guid(9c1a1a1ed4d8bd145b6b4822668f12ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e568d156d7706ccbfc6d93e8a8e0ae1a') in 0.006147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.987971 seconds.
+  path: Assets/Scripts/EnemySpawner.cs
+  artifactKey: Guid(037928d38e9c2454d9508abf76d1b43e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemySpawner.cs using Guid(037928d38e9c2454d9508abf76d1b43e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '825019c48eb275f8fb4375377dbbc375') in 0.007160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.803917 seconds.
+  path: Assets/Scripts/Movement2D.cs
+  artifactKey: Guid(b803f9cb8fb731540b098e3201e2c31a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Movement2D.cs using Guid(b803f9cb8fb731540b098e3201e2c31a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23208b7a3c41827e33802ad10c3fff9e') in 0.006615 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003231 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.931 seconds
+Domain Reload Profiling:
+	ReloadAssembly (931ms)
+		BeginReloadAssembly (131ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (740ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (256ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (277ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (169ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2388 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 107.5 MB.
+System memory in use after: 107.7 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2936.
+Total: 3.172900 ms (FindLiveObjects: 0.236700 ms CreateObjectMapping: 0.063100 ms MarkObjects: 2.845000 ms  DeleteObjects: 0.026500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
