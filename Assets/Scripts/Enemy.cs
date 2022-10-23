@@ -52,24 +52,42 @@ public class Enemy : MonoBehaviour
     }
     private void NextMoveTo()
     {
-        //아직 이동할 wayPoints가 남아있다면
-        if(currentIndex < wayPointCount - 1)
+        //적의 위치를 정확하게 목표위치로 설정
+        transform.position = wayPoints[currentIndex].position;
+        //이동 방향 설정 => 다음 목표지점(wayPoints)
+        if (currentIndex == wayPointCount - 1)
         {
-            //적의 위치를 정확하게 목표위치로 설정
-            transform.position = wayPoints[currentIndex].position;
-            //이동 방향 설정 => 다음 목표지점(wayPoints)
+            currentIndex = 0;
+            Vector3 direction = (wayPoints[0].position - transform.position).normalized;
+            movement2D.MoveTo(direction);
+        }
+        else
+        {
             currentIndex++;
             Vector3 direction = (wayPoints[currentIndex].position - transform.position).normalized;
             movement2D.MoveTo(direction);
         }
-        else//현재 위치가 마지막 wayPoint라면
-        {
-            //목표지점에 도달해서 사망할 때는 돈을 주지 않도록 gold = 0으로 설정
-            gold = 0;
+            
 
-            //Destroy(gameObject);//적 오브젝트 삭제
-            OnDie(EnemyDestroyType.Arrive);
-        }
+
+        ////아직 이동할 wayPoints가 남아있다면
+        //if (currentIndex < wayPointCount - 1)
+        //{
+
+        //}
+        //else//현재 위치가 마지막 wayPoint라면
+        //{
+        //    currentIndex = 0;
+        //    transform.position = wayPoints[0].position;
+        //    Vector3 direction = (wayPoints[0].position - transform.position).normalized;
+        //    movement2D.MoveTo(direction);
+        //    //원래 이것만 있었음
+        //    ////목표지점에 도달해서 사망할 때는 돈을 주지 않도록 gold = 0으로 설정
+        //    //gold = 0;
+
+        //    ////Destroy(gameObject);//적 오브젝트 삭제
+        //    //OnDie(EnemyDestroyType.Arrive);
+        //}
     }
 
     public void OnDie(EnemyDestroyType type)
