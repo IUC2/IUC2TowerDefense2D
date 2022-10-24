@@ -35,7 +35,6 @@ public class EnemySpawner : MonoBehaviour
 
     //현재 웨이브에 남은 적, 최대 적 숫자
     public int CurrentEnemyCount => currentEnemyCount;
-    public int MaxEnemyCount => currentWave.maxEnemyCount;
 
     private void Awake()
     {
@@ -50,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
         //매개변수로 받아온 웨이브 정보 저장
         currentWave = wave;
         //웨이브 시작 시 현재 적 숫자를 현재 웨이브의 최대 적 숫자를 저장
-        currentEnemyCount = currentWave.maxEnemyCount;
+        currentEnemyCount += currentWave.maxEnemyCount;
         //현재 웨이브 시작
         StartCoroutine("SpawnEnemy");
     }
@@ -81,35 +80,12 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(currentWave.spawnTime);//spawnTime 시간 동안 대기
         }
     }
-
-    //#무한 생성 Ver SpawnEnemy()
-    //private IEnumerator SpawnEnemy()
-    //{
-    //    while (true)
-    //    {
-    //        GameObject clone = Instantiate(enemyPrefab);//적 오브젝트 생성
-    //        Enemy enemy = clone.GetComponent<Enemy>();  //방금 생성된 적의 Enemy 컴포넌트
-
-    //        enemy.SetUp(this, wayPoints);               //wayPoint 정보를 매개변수로 Setup() 호출, this는 나 자신(EnemySpawner Component)를 의미
-    //        enemyList.Add(enemy);                       //리스트에 방금 생성된 적 정보 저장
-
-    //        SpawnEnemyHPSlider(clone);                  //적 체력을 나타내는 Slider UI 생성 및 설정
-
-    //        yield return new WaitForSeconds(spawnTime);
-    //    }
-    //}
     
     public void DestroyEnemy(EnemyDestroyType type, Enemy enemy, int gold)
     {
-        //적이 목표지점까지 도착했을 때,
-        if(type == EnemyDestroyType.Arrive)
+        if(type == EnemyDestroyType.kill)//적이 플레이어의 발사체에 사망했을 때
         {
-            //플에이어의 체력 - 1
-            playerHP.TakeDamage(1);
-        }
-        else if(type == EnemyDestroyType.kill)//적이 플레이어의 발사체에 사망했을 때
-        {
-            playerGold.CurrentGold += gold;
+            GameManager.gameManager.CurrentGold += gold;
         }
         //적이 사망할 때마다 현재 웨이브의 생존한 적 숫자 수 감소(UI 표시용)
         currentEnemyCount--;

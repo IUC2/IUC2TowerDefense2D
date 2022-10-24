@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\TowerDataViewer.cs" />
     <Compile Include="Assets\Scripts\CameraResolution.cs" />
     <Compile Include="Assets\Scripts\WaveSystem.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\TowerTemplate.cs" />
     <Compile Include="Assets\Scripts\EnemyHPViewer.cs" />
     <Compile Include="Assets\Scripts\Movement2D.cs" />
@@ -79,7 +80,6 @@
     <Compile Include="Assets\Scripts\EnemyHP.cs" />
     <Compile Include="Assets\Scripts\PlayerGold.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -31,7 +31,7 @@ public class TowerSpawner : MonoBehaviour
 
         //타워 건설 가능 여부 확인
         //타워를 건설할 만큼 돈이 없으면, 타워 건설 X
-        if( towerTemplate[towerType].weapon[0].cost > playerGold.CurrentGold)
+        if (towerTemplate[towerType].weapon[0].cost > GameManager.gameManager.CurrentGold)
         {
             //골드가 부족해 타워 건설이 불가능하다 출력
             systemTextViewer.PrintText(SystemType.Money);
@@ -77,7 +77,7 @@ public class TowerSpawner : MonoBehaviour
         tile.IsBuildTower = true;
         //타워 건설에 필요한 골드만큼 감소
         //playerGold.CurrentGold -= towerBuildGold;
-        playerGold.CurrentGold -= towerTemplate[towerType].weapon[0].cost;
+        GameManager.gameManager.CurrentGold -= towerTemplate[towerType].weapon[0].cost;
         //선택한 타일의 위치에 타워 건설(타일보다 z = -1 위치에 배치) => 타워가 타일에 배치된 경우 타일보다 타워를 우선 선택할 수 있도록 함
         Vector3 position = tileTransform.position + Vector3.back;
         //GameObject clone = Instantiate(towerPrefab, position, Quaternion.identity);

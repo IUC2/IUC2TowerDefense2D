@@ -361,7 +361,7 @@ public class TowerWeapon : MonoBehaviour
     public bool Upgrade()
     {
         //타워 업그레이드에 필요한 골드가 충분한지 검사
-        if(playerGold.CurrentGold < towerTemplate.weapon[level + 1].cost)
+        if(GameManager.gameManager.CurrentGold < towerTemplate.weapon[level + 1].cost)
         {
             return false;
         }
@@ -371,7 +371,7 @@ public class TowerWeapon : MonoBehaviour
         //타워 외형 변경
         spriteRenderer.sprite = towerTemplate.weapon[level].sprite;
         //골드 차감
-        playerGold.CurrentGold -= towerTemplate.weapon[level].cost;
+        GameManager.gameManager.CurrentGold -= towerTemplate.weapon[level].cost;
 
         //무기 속성이 레이저라면
         if(weaponType == WeaponType.Laser)
@@ -391,7 +391,7 @@ public class TowerWeapon : MonoBehaviour
     public void Sell()
     {
         //골드 증가
-        playerGold.CurrentGold += towerTemplate.weapon[level].sell;
+        GameManager.gameManager.CurrentGold += towerTemplate.weapon[level].sell;
         //현재 타일에 다시 타워 건설이 가능해지도록 설정
         ownerTile.IsBuildTower = false;
         //타워 파괴
