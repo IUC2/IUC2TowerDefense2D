@@ -26,7 +26,7 @@ public class WaveSystem : MonoBehaviour
         {
             currentWaveIndex++;
             StartWave();
-            GameManager.gameManager.spawntime = 60;
+            GameManager.gameManager.spawntime = 30;
         }
     }
 }

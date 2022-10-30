@@ -7105,10 +7105,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textTime: {fileID: 1613712295}
-  spawntime: 0
+  spawntime: 10
   sec: 0
   min: 0
-  currentGold: 100
+  currentGold: 10000
   imageScreen: {fileID: 0}
   maxHP: 100
 --- !u!4 &1209751559
