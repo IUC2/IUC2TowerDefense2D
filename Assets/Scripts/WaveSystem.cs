@@ -21,7 +21,6 @@ public class WaveSystem : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(GameManager.gameManager.spawntime);
         if (GameManager.gameManager.spawntime < 0.1f)
         {
             currentWaveIndex++;

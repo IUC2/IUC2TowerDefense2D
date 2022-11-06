@@ -16,22 +16,31 @@ MonoBehaviour:
   follorTowerPrefab: {fileID: 5569805328247885498, guid: 76d543a6fb9f95f43b365b13222c5757, type: 3}
   weapon:
   - sprite: {fileID: 21300000, guid: 9aa6d6b998727234f83d187a46e61516, type: 3}
+    name: 
+    type: 
     damage: 0
     slow: 0.2
+    buff: 0
     rate: 0
     range: 2
     cost: 400
     sell: 200
   - sprite: {fileID: 21300000, guid: d5ea4b78dd7eb0d41ac4a39d66715676, type: 3}
+    name: 
+    type: 
     damage: 0
     slow: 0.3
+    buff: 0
     rate: 0
     range: 2
     cost: 600
     sell: 300
   - sprite: {fileID: 21300000, guid: e29b9edf7e9af9a4a82633657a5f999e, type: 3}
+    name: 
+    type: 
     damage: 0
     slow: 0.4
+    buff: 0
     rate: 0
     range: 2
     cost: 1000
