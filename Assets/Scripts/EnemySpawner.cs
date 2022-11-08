@@ -17,7 +17,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private Transform[]     wayPoints;              //현재 스테이지의 이동 경로
     private Wave currentWave;                       //현재 웨이브 정보. 웨이브 구조체에 적 프리팹과 생성주기에 대한 정보가 존재해 본 클래스의 프리팹 및 생성주기 변수 삭제 가능
-    private int currentEnemyCount;                  //현재 웨이브에 남은 적 숫자(웨이브 시작 시, max로 설정, 적 사망 시 -1) 
 
     //enemySpawner 스크립트에서 타워에게 맵에 있는 적 정보를 제공하기 위해 적이 생성될 때, 적 정보를 list에 저장
     //적 삭제시, 적 정보를 리스트에서 삭제
@@ -28,9 +27,6 @@ public class EnemySpawner : MonoBehaviour
 
     //적의 생성 및 삭제는 Enemy에서 수행하기 때문에 Set 프로퍼티는 필요X
     public List<Enemy> EnemyList => enemyList;
-
-    //현재 웨이브에 남은 적, 최대 적 숫자
-    public int CurrentEnemyCount => currentEnemyCount;
 
     private void Awake()
     {
@@ -44,8 +40,6 @@ public class EnemySpawner : MonoBehaviour
     {
         //매개변수로 받아온 웨이브 정보 저장
         currentWave = wave;
-        //웨이브 시작 시 현재 적 숫자를 현재 웨이브의 최대 적 숫자를 저장
-        currentEnemyCount += currentWave.maxEnemyCount;
         //현재 웨이브 시작
         StartCoroutine("SpawnEnemy");
     }
@@ -71,6 +65,7 @@ public class EnemySpawner : MonoBehaviour
 
             //현재 웨이브에서 생성된 적의 숫자 + 1
             spawnEnemyCount++;
+            GameManager.gameManager.CurEnemyCount += 1;
 
             //각 웨이브마다 SpawnTime이 다를 수 있기 때문에 현재 웨이브(currentWave)의 spawnTime 사용
             yield return new WaitForSeconds(currentWave.spawnTime);//spawnTime 시간 동안 대기
@@ -83,8 +78,7 @@ public class EnemySpawner : MonoBehaviour
         {
             GameManager.gameManager.PlayerGold += gold;
         }
-        //적이 사망할 때마다 현재 웨이브의 생존한 적 숫자 수 감소(UI 표시용)
-        currentEnemyCount--;
+        GameManager.gameManager.CurEnemyCount -= 1;
         //리스트에서 사망하는 적 정보 삭제
         enemyList.Remove(enemy);
         //적 오브젝트 삭제

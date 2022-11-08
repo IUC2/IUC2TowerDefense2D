@@ -1730,7 +1730,6 @@ GameObject:
   - component: {fileID: 227921823}
   - component: {fileID: 227921825}
   - component: {fileID: 227921824}
-  - component: {fileID: 227921826}
   m_Layer: 5
   m_Name: PanelStage
   m_TagString: Untagged
@@ -1801,24 +1800,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227921822}
   m_CullTransparentMesh: 1
---- !u!114 &227921826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227921822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00af6352ba6d2d4c8b861affdaba249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPlayerHP: {fileID: 0}
-  textPlayerGold: {fileID: 540430886}
-  textWave: {fileID: 111565565}
-  waveSystem: {fileID: 1789117750}
-  textEnemyCount: {fileID: 1344014458}
-  enemySpawner: {fileID: 1789117748}
 --- !u!1001 &262102062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6046,12 +6027,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textTime: {fileID: 1613712295}
+  textPlayerGold: {fileID: 540430886}
+  textWave: {fileID: 111565565}
+  waveSystem: {fileID: 1789117750}
+  textEnemyCount: {fileID: 1344014458}
+  enemySpawner: {fileID: 1789117748}
+  imageScreen: {fileID: 0}
+  playerGold: 10000
   spawntime: 10
   sec: 0
   min: 0
-  playerGold: 10000
-  imageScreen: {fileID: 0}
   playerMaxHP: 50
+  curEnemyCount: 0
 --- !u!4 &1209751559
 Transform:
   m_ObjectHideFlags: 0
