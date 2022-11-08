@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2895832414793319133}
   - component: {fileID: 2895832414793319132}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LaserEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 2895832414883565928}
   - component: {fileID: 2895832414883565930}
   - component: {fileID: 2895832414883565931}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LayserHitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4945,7 +4945,7 @@ GameObject:
   - component: {fileID: 2895832415370867130}
   - component: {fileID: 596618547224199919}
   - component: {fileID: 61745604768847541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tower02
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -5041,6 +5041,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
+  ownerTile: {fileID: 0}
 --- !u!65 &61745604768847541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5063,7 +5064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2895832416162430668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

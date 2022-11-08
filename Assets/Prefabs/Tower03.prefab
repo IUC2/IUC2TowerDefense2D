@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1724101096520088469}
   - component: {fileID: 1724101096520088467}
   - component: {fileID: 1724101096520088468}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlowEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4816,7 +4816,7 @@ GameObject:
   - component: {fileID: 1724101097697081412}
   - component: {fileID: 991430536096662248}
   - component: {fileID: 3992354131934415896}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tower03
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -4911,6 +4911,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
+  ownerTile: {fileID: 0}
 --- !u!65 &3992354131934415896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4936,7 +4937,7 @@ GameObject:
   - component: {fileID: 7206402096378976264}
   - component: {fileID: 8659027907264488175}
   - component: {fileID: 6837217989719708826}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlowCollider2D
   m_TagString: Tower
   m_Icon: {fileID: 0}

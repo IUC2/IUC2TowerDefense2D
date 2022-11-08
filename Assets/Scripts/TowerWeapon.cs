@@ -44,10 +44,11 @@ public class TowerWeapon : MonoBehaviour
     private EnemySpawner    enemySpawner;//게임에 존재하는 적 정보 획득용
     private SpriteRenderer  spriteRenderer;//타워 오브젝트 이미지 변경용
     private PlayerGold      playerGold;//플레이어의 골드 정보 획득 및 설정
-    private Tile            ownerTile;//현재 타워가 배치되어 있는 타일
-
+    
     private float           addedDamage;//버프에 의해 추가된 데미지
     private int             buffLevel;//버프를 받는지 여부 설정(0: 버프 X, 1 ~ 3: 받는 버프 레벨)
+
+    public Tile ownerTile;//현재 타워가 배치되어 있는 타일
 
     //Property
     //public float AttackDamage => attackDamage;
@@ -295,7 +296,7 @@ public class TowerWeapon : MonoBehaviour
     public void OnBuffAroundTower()
     {
         //현재 맵에 배치된 "Tower" 태그를 가진 모든 오브젝트 탐색
-        GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
+        GameObject[] towers = GameObject.FindGameObjectsWithTag("PlacedTower");
 
         for(int i = 0; i < towers.Length; ++i)
         {

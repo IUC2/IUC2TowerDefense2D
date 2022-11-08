@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 952108533741960683}
   - component: {fileID: -6126665927115093873}
   - component: {fileID: 8336990607993774001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tower01
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -106,6 +106,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
+  ownerTile: {fileID: 0}
 --- !u!65 &8336990607993774001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9041171255210406762}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}

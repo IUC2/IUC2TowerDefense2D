@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class ObjectDetector : MonoBehaviour
@@ -15,12 +16,17 @@ public class ObjectDetector : MonoBehaviour
     private Ray             mouseBtnUpRay;
     private RaycastHit      mouseBtnDownHit;
     private RaycastHit      mouseBtnUpHit;
+    private RaycastHit      UIHit;
     private Transform       mouseBtnDownHitTransform = null;//마우스 픽킹으로 선택한 오브젝트 임시 저장
     private Transform       mouseBtnUpHitTransform = null;//마우스 픽킹으로 선택한 오브젝트 임시 저장
+    private Vector3         saveVector;
 
+    private GameObject clickedTower = null;
+
+    public GameObject sellPanel = null;
+
+    private float isDragTime;
     bool towerClicked = false;
-    bool uiBtnClicked = false;
-
     private void Awake()
     {
         mainCamera = Camera.main;
@@ -30,28 +36,22 @@ public class ObjectDetector : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            mouseBtnDownRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-            //마우스가 UI 위에 있을 경우 아래 코드가 실행되지 않도록 하는 것
-            if (EventSystem.current.IsPointerOverGameObject() == true)
-            {
-                return;
-            }
 
-            if (Physics.Raycast(mouseBtnDownRay, out mouseBtnDownHit, Mathf.Infinity))
+            int layerMask = (-1) - (1 << LayerMask.NameToLayer("Tower"));  // Everything에서 Player 레이어만 제외하고 충돌 체크함
+            mouseBtnDownRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(mouseBtnDownRay, out mouseBtnDownHit, Mathf.Infinity, layerMask))
             {
                 mouseBtnDownHitTransform = mouseBtnDownHit.transform;
-
-                if (mouseBtnDownHitTransform.CompareTag("Tower"))
+                if (mouseBtnDownHitTransform.CompareTag("PlacedTower"))
                 {
                     towerClicked = true;
-                    Debug.Log("TowerDown");
+                    sellPanel.SetActive(true);
+                    clickedTower = mouseBtnDownHitTransform.gameObject;
+                    saveVector = clickedTower.transform.position;
+                    clickedTower.layer = LayerMask.NameToLayer("Tower");
+                    clickedTower.tag = "Tower";
                 }
                 else if (mouseBtnDownHitTransform.CompareTag("Tile"))
-                {
-                    Debug.Log("TileDown");
-                    return;
-                }
-                else
                 {
                     return;
                 }
@@ -62,31 +62,66 @@ public class ObjectDetector : MonoBehaviour
             if (towerClicked)
             {
                 //타워 이미지 따라오기
-                Debug.Log("TileClicking");
+                isDragTime += Time.deltaTime;
+                towerSpawner.SetDragPosition(mainCamera, clickedTower);
             }
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            if (towerClicked)//Tower 클릭 -->
+            if (isDragTime >= 0.01f)
             {
-                mouseBtnUpRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(mouseBtnUpRay, out mouseBtnUpHit, Mathf.Infinity))
+                //Drag
+                isDragTime = 0;
+                if (towerClicked)//Tower 클릭 -->
                 {
-                    mouseBtnUpHitTransform = mouseBtnUpHit.transform;
-                    if (mouseBtnUpHitTransform.CompareTag("Tower"))//Tower에 배치
+                    //특정 layer만 raycast제외하기 (1)
+                    int layerMask = (-1) - (1 << LayerMask.NameToLayer("Tower"));
+                    mouseBtnUpRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+                    if (Physics.Raycast(mouseBtnUpRay, out mouseBtnUpHit, Mathf.Infinity, layerMask))
                     {
-                        Debug.Log("TowerUp");
+                        mouseBtnUpHitTransform = mouseBtnUpHit.transform;
+                        if (mouseBtnUpHitTransform.CompareTag("PlacedTower"))
+                        {
+                            //2단계 합체
+                        }
+                        else if (mouseBtnUpHitTransform.CompareTag("Tile"))
+                        {
+                            //기존 tile 정보 및 tower 정보 갱신
+                            towerSpawner.SpawnTower2(mouseBtnUpHitTransform, clickedTower);
+                        }
+                        else
+                        {
+                            //필요 구간
+                        }
                     }
-                    else if (mouseBtnUpHitTransform.CompareTag("Tile"))//Tile에 배치
+                    else
                     {
-                        Debug.Log("TileUp");
+                        Debug.Log("elsePointerUp");
+                        //여기에서 원래 자리로 복귀하도록 설정
+                        if (EventSystem.current.IsPointerOverGameObject())
+                        {
+                            clickedTower.GetComponent<TowerWeapon>().Sell();
+                        }
+                        else
+                        {
+                            clickedTower.transform.position = saveVector + Vector3.back;
+                            clickedTower.layer = LayerMask.NameToLayer("PlacedTower");
+                            clickedTower.tag = "PlacedTower";
+                        }
                     }
+                    mouseBtnDownHitTransform = null;
+                    mouseBtnUpHitTransform = null;
+                    clickedTower = null;
+                    towerClicked = false;
                 }
             }
-            mouseBtnDownHitTransform = null;
-            mouseBtnUpHitTransform = null;
-            towerClicked = false;
-            uiBtnClicked = false;
+            else
+            {
+                //click
+                towerSpawner.DestroyFollowTowerClone();
+                isDragTime = 0;
+            }
+            sellPanel.SetActive(false);
         }
     }
 }
