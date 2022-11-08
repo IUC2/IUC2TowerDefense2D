@@ -1,0 +1,29 @@
+{
+	"recipes":[
+		
+		{
+			"input":["tower01","tower01"],
+			"output":"tower02"
+		},
+		{
+			"input":["tower01","tower02"],
+			"output":"tower03"
+		},
+		{
+			"input":["tower02","tower02"],
+			"output":"tower04"
+		},
+		{
+			"input":["tower01","tower03"],
+			"output":"tower04"
+		},
+		{
+			"input":["tower02","tool01"],
+			"output":"tower06"
+		},
+		{
+			"input":["tower03","seasoning01"],
+			"output":"tower07"
+		}
+	]
+}
