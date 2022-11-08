@@ -13,8 +13,6 @@ public class TowerSpawner : MonoBehaviour
     [SerializeField]
     private EnemySpawner enemySpawner;      //현재 맵에 존재하는 적 리스트 정보를 얻기 위해 임시 저장하는 변수
     [SerializeField]
-    private PlayerGold playerGold;          //타워 건설 시 골드 감소를 위해..
-    [SerializeField]
     private SystemTextViewer systemTextViewer;//돈 부족, 건설 불가와 같은 시스템 메시지를 출력
     private bool isOnTowerButton = false;//타워 건설 버튼을 눌렀는지 체크
     private int towerType;//타워 속성
@@ -31,7 +29,7 @@ public class TowerSpawner : MonoBehaviour
         }
         //타워 건설 가능 여부 확인
         //타워를 건설할 만큼 돈이 없으면, 타워 건설 X
-        if (towerTemplate[towerType].weapon[0].cost > GameManager.gameManager.CurrentGold)
+        if (towerTemplate[towerType].weapon[0].cost > GameManager.gameManager.PlayerGold)
         {
             //골드가 부족해 타워 건설이 불가능하다 출력
             systemTextViewer.PrintText(SystemType.Money);
@@ -70,12 +68,12 @@ public class TowerSpawner : MonoBehaviour
         tile.IsBuildTower = true;
         //타워 건설에 필요한 골드만큼 감소
         //playerGold.CurrentGold -= towerBuildGold;
-        GameManager.gameManager.CurrentGold -= towerTemplate[towerType].weapon[0].cost;
+        GameManager.gameManager.PlayerGold -= towerTemplate[towerType].weapon[0].cost;
         //선택한 타일의 위치에 타워 건설(타일보다 z = -1 위치에 배치) => 타워가 타일에 배치된 경우 타일보다 타워를 우선 선택할 수 있도록 함
         Vector3 position = tileTransform.position + Vector3.back;
         //GameObject clone = Instantiate(towerPrefab, position, Quaternion.identity);
         GameObject clone = Instantiate(towerTemplate[towerType].towerPrefab, position, Quaternion.identity);
-        clone.GetComponent<TowerWeapon>().SetUp(this, enemySpawner, playerGold, tile);
+        clone.GetComponent<TowerWeapon>().SetUp(this, enemySpawner, tile);
         clone.tag = "PlacedTower";
         clone.layer = LayerMask.NameToLayer("PlacedTower");
         //새로 배치되는 타워가 버프 타워 주변에 배치될 경우

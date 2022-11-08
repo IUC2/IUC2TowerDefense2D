@@ -16,10 +16,6 @@ public class EnemySpawner : MonoBehaviour
     //private float           spawnTime;              //적 생성 주기
     [SerializeField]
     private Transform[]     wayPoints;              //현재 스테이지의 이동 경로
-    [SerializeField]
-    private PlayerHP playerHP;                      //플레이어의 체력 컴포넌트
-    [SerializeField]
-    private PlayerGold playerGold;                  //플레이어의 골드 컴포넌트
     private Wave currentWave;                       //현재 웨이브 정보. 웨이브 구조체에 적 프리팹과 생성주기에 대한 정보가 존재해 본 클래스의 프리팹 및 생성주기 변수 삭제 가능
     private int currentEnemyCount;                  //현재 웨이브에 남은 적 숫자(웨이브 시작 시, max로 설정, 적 사망 시 -1) 
 
@@ -85,7 +81,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if(type == EnemyDestroyType.kill)//적이 플레이어의 발사체에 사망했을 때
         {
-            GameManager.gameManager.CurrentGold += gold;
+            GameManager.gameManager.PlayerGold += gold;
         }
         //적이 사망할 때마다 현재 웨이브의 생존한 적 숫자 수 감소(UI 표시용)
         currentEnemyCount--;

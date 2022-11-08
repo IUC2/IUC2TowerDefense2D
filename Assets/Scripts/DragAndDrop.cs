@@ -42,12 +42,11 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
         }
         isDragTime += Time.deltaTime;
         towerSpawner.SetDragPosition(mainCamera, towerSpawner.followTowerClone);
-        Debug.Log("UIOnDrag");
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if(isDragTime >= 0.01f)
+        if(isDragTime >= 0.001f)
         {
             //Drag
             isDragTime = 0f;
@@ -68,23 +67,24 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
                 else
                 {
                     //필요 구간
+                    Debug.Log("UIClick3");
                 }
 
             }
             else
             {
                 //필요 구간
+                Debug.Log("UIClick2");
             }
-            towerSpawner.DestroyFollowTowerClone();
-            mouseBtnUpHitTransform = null;
         }
         else
         {
             //click
-            towerSpawner.DestroyFollowTowerClone();
-            isDragTime = 0f;
+            Debug.Log("UIClick");
         }
         //내가 지금 처리해줘야 하는 것이 UI에 배치된 상황 or 길목에 배치된 상황
-
+        towerSpawner.DestroyFollowTowerClone();
+        mouseBtnUpHitTransform = null;
+        isDragTime = 0f;
     }
 }

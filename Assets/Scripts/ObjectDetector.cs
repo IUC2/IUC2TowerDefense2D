@@ -68,30 +68,42 @@ public class ObjectDetector : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            if (isDragTime >= 0.01f)
+            if (isDragTime >= 0.001f)
             {
                 //Drag
+                Debug.Log("Drag");
                 isDragTime = 0;
                 if (towerClicked)//Tower 클릭 -->
                 {
+
                     //특정 layer만 raycast제외하기 (1)
                     int layerMask = (-1) - (1 << LayerMask.NameToLayer("Tower"));
                     mouseBtnUpRay = mainCamera.ScreenPointToRay(Input.mousePosition);
                     if (Physics.Raycast(mouseBtnUpRay, out mouseBtnUpHit, Mathf.Infinity, layerMask))
                     {
                         mouseBtnUpHitTransform = mouseBtnUpHit.transform;
+                        //기존 tile 정보 및 tower 정보 갱신
                         if (mouseBtnUpHitTransform.CompareTag("PlacedTower"))
                         {
-                            //2단계 합체
+                            Debug.Log("2단계 합체");
                         }
                         else if (mouseBtnUpHitTransform.CompareTag("Tile"))
                         {
-                            //기존 tile 정보 및 tower 정보 갱신
-                            towerSpawner.SpawnTower2(mouseBtnUpHitTransform, clickedTower);
-                        }
-                        else
-                        {
-                            //필요 구간
+                            if (mouseBtnUpHitTransform.gameObject.GetComponent<Tile>().IsBuildTower == true)
+                            {
+                                //이전 자리 귀환
+                                Debug.Log("SpawnTower2");
+                                clickedTower.transform.position = saveVector + Vector3.back;
+                                clickedTower.layer = LayerMask.NameToLayer("PlacedTower");
+                                clickedTower.tag = "PlacedTower";
+                            }
+                            else
+                            {
+                                //자리 이동
+                                Debug.Log("SpawnTower2");
+                                towerSpawner.SpawnTower2(mouseBtnUpHitTransform, clickedTower);
+                            }
+                            
                         }
                     }
                     else
@@ -100,10 +112,12 @@ public class ObjectDetector : MonoBehaviour
                         //여기에서 원래 자리로 복귀하도록 설정
                         if (EventSystem.current.IsPointerOverGameObject())
                         {
+                            //판매
                             clickedTower.GetComponent<TowerWeapon>().Sell();
                         }
                         else
                         {
+                            //이전 자리 귀환
                             clickedTower.transform.position = saveVector + Vector3.back;
                             clickedTower.layer = LayerMask.NameToLayer("PlacedTower");
                             clickedTower.tag = "PlacedTower";
@@ -114,10 +128,16 @@ public class ObjectDetector : MonoBehaviour
                     clickedTower = null;
                     towerClicked = false;
                 }
+                else
+                {
+                    //필요 구간
+                    Debug.Log("특이지점2");
+                }
             }
             else
             {
                 //click
+                Debug.Log("ick");
                 towerSpawner.DestroyFollowTowerClone();
                 isDragTime = 0;
             }

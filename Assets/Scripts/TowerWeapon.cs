@@ -43,7 +43,6 @@ public class TowerWeapon : MonoBehaviour
     private TowerSpawner    towerSpawner;
     private EnemySpawner    enemySpawner;//게임에 존재하는 적 정보 획득용
     private SpriteRenderer  spriteRenderer;//타워 오브젝트 이미지 변경용
-    private PlayerGold      playerGold;//플레이어의 골드 정보 획득 및 설정
     
     private float           addedDamage;//버프에 의해 추가된 데미지
     private int             buffLevel;//버프를 받는지 여부 설정(0: 버프 X, 1 ~ 3: 받는 버프 레벨)
@@ -78,12 +77,11 @@ public class TowerWeapon : MonoBehaviour
         get => buffLevel;
     }
 
-    public void SetUp(TowerSpawner towerSpawner, EnemySpawner enemySpawner, PlayerGold playerGold, Tile ownerTile)
+    public void SetUp(TowerSpawner towerSpawner, EnemySpawner enemySpawner, Tile ownerTile)
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         this.towerSpawner = towerSpawner;
         this.enemySpawner = enemySpawner;
-        this.playerGold = playerGold;
         this.ownerTile = ownerTile;
 
         ////최초 상태를 WeaponState.SearchTarget으로 설정
@@ -362,7 +360,7 @@ public class TowerWeapon : MonoBehaviour
     public bool Upgrade()
     {
         //타워 업그레이드에 필요한 골드가 충분한지 검사
-        if(GameManager.gameManager.CurrentGold < towerTemplate.weapon[level + 1].cost)
+        if(GameManager.gameManager.PlayerGold < towerTemplate.weapon[level + 1].cost)
         {
             return false;
         }
@@ -372,7 +370,7 @@ public class TowerWeapon : MonoBehaviour
         //타워 외형 변경
         spriteRenderer.sprite = towerTemplate.weapon[level].sprite;
         //골드 차감
-        GameManager.gameManager.CurrentGold -= towerTemplate.weapon[level].cost;
+        GameManager.gameManager.PlayerGold -= towerTemplate.weapon[level].cost;
 
         //무기 속성이 레이저라면
         if(weaponType == WeaponType.Laser)
@@ -392,7 +390,7 @@ public class TowerWeapon : MonoBehaviour
     public void Sell()
     {
         //골드 증가
-        GameManager.gameManager.CurrentGold += towerTemplate.weapon[level].sell;
+        GameManager.gameManager.PlayerGold += towerTemplate.weapon[level].sell;
         //현재 타일에 다시 타워 건설이 가능해지도록 설정
         ownerTile.IsBuildTower = false;
         //타워 파괴
