@@ -56,7 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ObjectFollowMousePosition.cs" />
+    <Compile Include="Assets\Scripts\DragAndDrop.cs" />
     <Compile Include="Assets\Scripts\Slow.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
@@ -76,9 +76,7 @@
     <Compile Include="Assets\Scripts\EnemyHPViewer.cs" />
     <Compile Include="Assets\Scripts\Movement2D.cs" />
     <Compile Include="Assets\Scripts\SliderPositionAutoSetter.cs" />
-    <Compile Include="Assets\Scripts\PlayerHP.cs" />
     <Compile Include="Assets\Scripts\EnemyHP.cs" />
-    <Compile Include="Assets\Scripts\PlayerGold.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
