@@ -96,6 +96,8 @@ public class ObjectDetector : MonoBehaviour
                                 clickedTower.transform.position = saveVector + Vector3.back;
                                 clickedTower.layer = LayerMask.NameToLayer("PlacedTower");
                                 clickedTower.tag = "PlacedTower";
+                                SystemTextViewer.systemTextViewer.PrintText(SystemType.Build);//현재 위치에 타워 건설이 불가능 출력
+
                             }
                             else
                             {

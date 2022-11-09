@@ -12,8 +12,6 @@ public class TowerSpawner : MonoBehaviour
     //private int towerBuildGold = 50;        //타워 건설에 사용되는 골드
     [SerializeField]
     private EnemySpawner enemySpawner;      //현재 맵에 존재하는 적 리스트 정보를 얻기 위해 임시 저장하는 변수
-    [SerializeField]
-    private SystemTextViewer systemTextViewer;//돈 부족, 건설 불가와 같은 시스템 메시지를 출력
     private bool isOnTowerButton = false;//타워 건설 버튼을 눌렀는지 체크
     private int towerType;//타워 속성
     public GameObject followTowerClone = null;//임시 타워 사용 완료 시 삭제를 위해 저장하는 변수
@@ -32,7 +30,7 @@ public class TowerSpawner : MonoBehaviour
         if (towerTemplate[towerType].weapon[0].cost > GameManager.gameManager.PlayerGold)
         {
             //골드가 부족해 타워 건설이 불가능하다 출력
-            systemTextViewer.PrintText(SystemType.Money);
+            SystemTextViewer.systemTextViewer.PrintText(SystemType.Money);
             return false;
         }
         //타워 건설 버튼을 눌렀다고 설정
@@ -58,8 +56,7 @@ public class TowerSpawner : MonoBehaviour
         //1. 현재 타일의 위치에 이미 타워가 건설되어 있다면 타워 건설 X
         if(tile.IsBuildTower == true)
         {
-            systemTextViewer.PrintText(SystemType.Build);//현재 위치에 타워 건설이 불가능 출력
-            //or 업그레이드 수행
+            SystemTextViewer.systemTextViewer.PrintText(SystemType.Build);//현재 위치에 타워 건설이 불가능 출력
             return null;
         }
         //다시 타워 건설 버튼을 눌러 타워를 건설하도록 변수 설정
