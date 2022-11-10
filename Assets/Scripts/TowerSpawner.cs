@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerSpawner : MonoBehaviour
 {
     [SerializeField]
-    private TowerTemplate[] towerTemplate;    //타워 정보(공격력, 공격 속도 등)
+    public TowerTemplate[] towerTemplate;    //타워 정보(공격력, 공격 속도 등)
     //[SerializeField]
     //private GameObject towerPrefab;
     //[SerializeField]

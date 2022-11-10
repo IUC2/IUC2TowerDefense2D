@@ -10,6 +10,8 @@ public class ObjectDetector : MonoBehaviour
     private TowerSpawner    towerSpawner;
     [SerializeField]
     private TowerDataViewer towerDataViewer;
+    [SerializeField]
+    private TowerManager towerManager;
 
     private Camera          mainCamera;
     private Ray             mouseBtnDownRay;
@@ -85,6 +87,13 @@ public class ObjectDetector : MonoBehaviour
                         //기존 tile 정보 및 tower 정보 갱신
                         if (mouseBtnUpHitTransform.CompareTag("PlacedTower"))
                         {
+                            if (!towerManager.GetComponent<TowerManager>().TowerUpgrade(mouseBtnUpHitTransform.gameObject, clickedTower)){
+                                Debug.Log("SpawnTower2");
+                                clickedTower.transform.position = saveVector + Vector3.back;
+                                clickedTower.layer = LayerMask.NameToLayer("PlacedTower");
+                                clickedTower.tag = "PlacedTower";
+                                SystemTextViewer.systemTextViewer.PrintText(SystemType.Build);//현재 위치에 타워 건설이 불가능 출력
+                            }
                             Debug.Log("2단계 합체");
                         }
                         else if (mouseBtnUpHitTransform.CompareTag("Tile"))

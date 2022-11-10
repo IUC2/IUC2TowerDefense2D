@@ -2,28 +2,28 @@
 	"recipes":[
 		
 		{
-			"input":["tower01","tower01"],
-			"output":"tower02"
+			"input":["tower1","tower1"],
+			"output":"tower2"
 		},
 		{
-			"input":["tower01","tower02"],
-			"output":"tower03"
+			"input":["tower1","tower2"],
+			"output":"tower3"
 		},
 		{
-			"input":["tower02","tower02"],
-			"output":"tower04"
+			"input":["tower2","tower2"],
+			"output":"tower4"
 		},
 		{
-			"input":["tower01","tower03"],
-			"output":"tower04"
+			"input":["tower1","tower3"],
+			"output":"tower4"
 		},
 		{
-			"input":["tower02","tool01"],
-			"output":"tower06"
+			"input":["tower2","tool1"],
+			"output":"tower6"
 		},
 		{
-			"input":["tower03","seasoning01"],
-			"output":"tower07"
+			"input":["tower3","seasoning1"],
+			"output":"tower7"
 		}
 	]
 }

@@ -10,7 +10,7 @@ public class TowerWeapon : MonoBehaviour
     //[Header(string)]: Inspector View에 표시되는 변수들을 용도별로 구분하기 위해 사용하는 어트리뷰트 string에 작성된 내용을 굵은 글씨로 표시
     [Header("Commons")]
     [SerializeField]
-    private TowerTemplate   towerTemplate;//타워 정보(공격력, 공격속도 등)
+    public TowerTemplate   towerTemplate;//타워 정보(공격력, 공격속도 등)
     //[SerializeField]
     //private GameObject      enemyBulletPrefab01;//발사체 프리팹
     [SerializeField]
