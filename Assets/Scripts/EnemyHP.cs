@@ -51,8 +51,8 @@ public class EnemyHP : MonoBehaviour
         color.a = 0.4f;
         spriteRenderer.color = color;
 
-        //0.05초 wait
-        yield return new WaitForSeconds(0.05f);
+        //0.1초 wait
+        yield return new WaitForSeconds(0.1f);
 
         //적의 투명도를 100%로 설정
         color.a = 1.0f;

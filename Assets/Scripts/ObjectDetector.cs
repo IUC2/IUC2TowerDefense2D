@@ -18,9 +18,8 @@ public class ObjectDetector : MonoBehaviour
     private Ray             mouseBtnUpRay;
     private RaycastHit      mouseBtnDownHit;
     private RaycastHit      mouseBtnUpHit;
-    private RaycastHit      UIHit;
-    private Transform       mouseBtnDownHitTransform = null;//마우스 픽킹으로 선택한 오브젝트 임시 저장
-    private Transform       mouseBtnUpHitTransform = null;//마우스 픽킹으로 선택한 오브젝트 임시 저장
+    private Transform       mouseBtnDownHitTransform = null;
+    private Transform       mouseBtnUpHitTransform = null;
     private Vector3         saveVector;
 
     private GameObject clickedTower = null;
@@ -151,6 +150,20 @@ public class ObjectDetector : MonoBehaviour
                 Debug.Log("ick");
                 towerSpawner.DestroyFollowTowerClone();
                 isDragTime = 0;
+                GameObject target = null;
+                Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Ray2D ray = new Ray2D(pos, Vector2.zero);
+                RaycastHit2D hit;
+                hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+                if (hit)
+                {
+                    target = hit.collider.gameObject;
+                    if(target.tag == "Enemy")//Enemy Touch
+                    {
+                        Debug.Log("Enemy Clicked");
+                        target.GetComponent<EnemyHP>().TakeDamage(0.5f);
+                    }
+                }
             }
             sellPanel.SetActive(false);
         }

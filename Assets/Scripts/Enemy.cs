@@ -11,9 +11,14 @@ public class Enemy : MonoBehaviour
     private int             currentIndex = 0;   //현재 목표지점 인덱스
     private Movement2D      movement2D;         //오브젝트 이동 제어
     private EnemySpawner    enemySpawner;       //적의 삭제를 본인이 하지 않고, EnemySpawner에 알려 삭제 수행
-
+    GameObject centerPoint;
     [SerializeField]
     private int             gold = 10;          //적 사망시 획득 가능한 골드
+
+    private void Awake()
+    {
+        centerPoint = GameObject.Find("CenterPoint");
+    }
 
     public void SetUp(EnemySpawner enemySpawner, Transform[] wayPoints)  
     {
@@ -40,11 +45,15 @@ public class Enemy : MonoBehaviour
         while (true)
         {
             //적 오브젝트 회전
-            transform.Rotate(Vector3.forward * 10);
+            Vector2 direction = new Vector2(transform.position.x - centerPoint.transform.position.x, transform.position.y - centerPoint.transform.position.y);
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion angelAxis = Quaternion.AngleAxis(angle - 90f, Vector3.forward);
+            Quaternion rotation = Quaternion.Slerp(transform.rotation, angelAxis, 10f * Time.deltaTime);
+            transform.rotation = rotation;
             //적의 현재위치와 목표위치의 거리가 0.02 * movement2D.MoveSpeed보다 작을 때 if 조건문 실행
             //TIP. movement2D.MoveSpeed를 곱해주는 이유는 속도가 빠르면 한 프레임에 0.02보다 크게 움직이기 때문에
             //if 조건무네 걸리지 않고 경로를 탈주하는 오브젝트가 발생 가능하다.
-            if(Vector3.Distance(transform.position, wayPoints[currentIndex].position) < 0.02f * movement2D.MoveSpeed){
+            if(Vector3.Distance(transform.position, wayPoints[currentIndex].position) < 0.04f * movement2D.MoveSpeed){
                 NextMoveTo();
             }
             yield return null;
