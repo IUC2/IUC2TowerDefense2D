@@ -98,8 +98,20 @@ public class GameManager : MonoBehaviour
             textTime.text = string.Format("{0:F2}", spawntime);
         }
 
-        textWave.text = "WAVE" + waveSystem.CurrentWave;
+        textWave.text = waveSystem.CurrentWave.ToString();
         textPlayerGold.text = GameManager.gameManager.PlayerGold.ToString();
-        textEnemyCount.text = "Enemy " + GameManager.gameManager.CurEnemyCount + "/" + GameManager.gameManager.PlayerMaxHP;
+        textEnemyCount.text = GameManager.gameManager.CurEnemyCount + "/" + GameManager.gameManager.PlayerMaxHP;
+    }
+    public void PuaseBtnOnClick()
+    {
+        Time.timeScale = 0f;
+    }
+    public void X1BtnOnClick()
+    {
+        Time.timeScale = 1f;
+    }
+    public void X2BtnOnClick()
+    {
+        Time.timeScale = 2f;
     }
 }

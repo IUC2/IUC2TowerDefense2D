@@ -15,12 +15,13 @@ public class TowerTemplate : ScriptableObject
         public Sprite sprite;   //보여지는 타워 이미지(UI)
         public string name;
         public string type;
-        public float damage;    //공격력
-        public float slow;      //감속 퍼센트(0.2 = 20%)
-        public float buff;      //공격력 증가율(0.2 = +20%)
-        public float rate;      //공격속도
-        public float range;     //공격 범위
-        public int cost;        //필요골드(0레벨: 건설, 1~레벨: 업그레이드)
-        public int sell;        //타워 판매 시 획득 골드
+        public float damage;        //공격력
+        public float slow;          //감속 퍼센트(0.2 = 20%)
+        public float buff;          //공격력 증가율(0.2 = +20%)
+        public float rate;          //공격속도
+        public float range;         //공격 범위
+        public int cost;            //필요골드(0레벨: 건설, 1~레벨: 업그레이드)
+        public float buildingTime;  //타워 설치 시간
+        public int sell;            //타워 판매 시 획득 골드
     }
 }
