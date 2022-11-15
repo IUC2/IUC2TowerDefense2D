@@ -29,11 +29,19 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if(GameManager.gameManager.ispaused == true)
+        {
+            return;
+        }
         towerSpawner.ReadyToSpawnTower(towerindex);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (GameManager.gameManager.ispaused == true)
+        {
+            return;
+        }
         int i = 0 ;
         if (i == 1)
         {
@@ -46,7 +54,11 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if(isDragTime >= 0.001f)
+        if (GameManager.gameManager.ispaused == true)
+        {
+            return;
+        }
+        if (isDragTime >= 0.001f)
         {
             //Drag
             isDragTime = 0f;

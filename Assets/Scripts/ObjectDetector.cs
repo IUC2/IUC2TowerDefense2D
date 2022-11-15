@@ -13,6 +13,8 @@ public class ObjectDetector : MonoBehaviour
     [SerializeField]
     private TowerManager towerManager;
 
+    public bool ispaused;
+
     private Camera          mainCamera;
     private Ray             mouseBtnDownRay;
     private Ray             mouseBtnUpRay;
@@ -21,7 +23,7 @@ public class ObjectDetector : MonoBehaviour
     private Transform       mouseBtnDownHitTransform = null;
     private Transform       mouseBtnUpHitTransform = null;
     private Vector3         saveVector;
-
+    
     private GameObject clickedTower = null;
 
     public GameObject sellPanel = null;
@@ -35,9 +37,13 @@ public class ObjectDetector : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.gameManager.ispaused == true)
+        {
+            return;
+        }
+            
         if (Input.GetMouseButtonDown(0))
         {
-
             int layerMask = (-1) - (1 << LayerMask.NameToLayer("Tower"));  // Everything에서 Player 레이어만 제외하고 충돌 체크함
             mouseBtnDownRay = mainCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(mouseBtnDownRay, out mouseBtnDownHit, Mathf.Infinity, layerMask))

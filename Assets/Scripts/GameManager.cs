@@ -22,8 +22,10 @@ public class GameManager : MonoBehaviour
     private Image imageScreen;  //전체화면을 덮는 빨간색 이미지
     [SerializeField]
     private int playerGold = 10000;
-    public float spawntime;
+
+    public bool ispaused = false;
     public int sec;
+    public float spawntime;
     public double min;
 
     public int PlayerGold//set & get이 가능한 Property 생성
@@ -105,13 +107,16 @@ public class GameManager : MonoBehaviour
     public void PuaseBtnOnClick()
     {
         Time.timeScale = 0f;
+        ispaused = true;
     }
     public void X1BtnOnClick()
     {
         Time.timeScale = 1f;
+        ispaused = false;
     }
     public void X2BtnOnClick()
     {
         Time.timeScale = 2f;
+        ispaused = false;
     }
 }
