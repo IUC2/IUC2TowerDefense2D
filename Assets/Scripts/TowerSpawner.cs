@@ -97,6 +97,7 @@ public class TowerSpawner : MonoBehaviour
         clickedTower.transform.position = position;
         clickedTower.tag = "PlacedTower";
         clickedTower.layer = LayerMask.NameToLayer("PlacedTower");
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("setTower");
     }
     private IEnumerator OnTowerCancelSystem()
     {
