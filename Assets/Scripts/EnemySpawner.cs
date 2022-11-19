@@ -69,7 +69,12 @@ public class EnemySpawner : MonoBehaviour
 
             //각 웨이브마다 SpawnTime이 다를 수 있기 때문에 현재 웨이브(currentWave)의 spawnTime 사용
             yield return new WaitForSeconds(currentWave.spawnTime);//spawnTime 시간 동안 대기
+            if (enemyList.Count >= 40)
+            {
+                GameObject.Find("SoundManager").GetComponent<SoundManager>().OnAudio("people");
+            }
         }
+
     }
     
     public void DestroyEnemy(EnemyDestroyType type, Enemy enemy, int gold)
@@ -83,6 +88,11 @@ public class EnemySpawner : MonoBehaviour
         enemyList.Remove(enemy);
         //적 오브젝트 삭제
         Destroy(enemy.gameObject);
+        
+        if (enemyList.Count < 40)
+        {
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().OffAudio("people");
+        }
     }
 
     private void SpawnEnemyHPSlider(GameObject enemy)

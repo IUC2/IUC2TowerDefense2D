@@ -16,6 +16,8 @@ public class WaveSystem : MonoBehaviour
 
     public void StartWave()
     {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("WaveStart");
+
         enemySpawner.StartWave(waves[Random.Range(0, MaxWave)]);
     }
 

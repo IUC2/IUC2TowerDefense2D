@@ -322,6 +322,7 @@ public class TowerWeapon : MonoBehaviour
 
     private void SpawnEnemyBullet()
     {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("attack");
         GameObject clone = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
         //생성된 발사체에게 공격 대상(attackTarget)의 위치, 움직임 정보 제공
         //clone.GetComponent<EnemyBullet>().Setup(attackTarget, attackDamage);
@@ -389,6 +390,7 @@ public class TowerWeapon : MonoBehaviour
 
     public void Sell()
     {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("sell");
         //골드 증가
         GameManager.gameManager.PlayerGold += towerTemplate.weapon[level].sell;
         //현재 타일에 다시 타워 건설이 가능해지도록 설정

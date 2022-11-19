@@ -39,11 +39,13 @@ public class EnemyHP : MonoBehaviour
             isDie = true;
             //적 캐릭터 사망
             enemy.OnDie(EnemyDestroyType.kill);
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("die");
         }
     }
 
     private IEnumerator HitAlphaAnimation()
     {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("eat");
         //현재 적의 색상을 color 변수에 저장
         Color color = spriteRenderer.color;
 

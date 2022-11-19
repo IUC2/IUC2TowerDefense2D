@@ -39,6 +39,8 @@ public class TowerSpawner : MonoBehaviour
         followTowerClone = Instantiate(towerTemplate[towerType].follorTowerPrefab);
         followTowerClone.gameObject.SetActive(false);
         //타워 건설을 취소할 수 있는 코루틴 함수 시작
+
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("click");
         StartCoroutine("OnTowerCancelSystem");
 
         return true;
@@ -81,7 +83,7 @@ public class TowerSpawner : MonoBehaviour
         DestroyFollowTowerClone();
         //타워 정상 배치로 인해 타워 건설을 취소할 수 있는 함수의 실행을 중지
         StopCoroutine("OnTowerCancelSystem");
-
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("setTower");
         return clone;
     }
 

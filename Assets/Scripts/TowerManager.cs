@@ -88,7 +88,7 @@ public class TowerManager : MonoBehaviour
                         Destroy(obj2);
                         towerSpawner.GetComponent<TowerSpawner>().ReadyToSpawnTower(i);
                         towerSpawner.GetComponent<TowerSpawner>().SpawnTower(temp_tile.transform);
-
+                        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV1");
                         Debug.Log("타워 " + new_tower + "생성!!");
 
                         result = true;
