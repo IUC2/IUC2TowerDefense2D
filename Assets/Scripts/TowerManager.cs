@@ -102,6 +102,40 @@ public class TowerManager : MonoBehaviour
         return result;
     }
 
+    public bool TowerUpgrade2(GameObject obj1, string tower2) 
+    {
+        bool result = false;
+        if (obj1.GetComponent<TowerWeapon>() == true)
+        {
+            string new_tower = FindrRecipe(obj1.GetComponent<TowerWeapon>().towerTemplate.weapon[0].name, tower2);
+            if (!new_tower.Equals("똥"))
+            {
+                for (int i = 0; i < towerSpawner.GetComponent<TowerSpawner>().towerTemplate.Length; i++)
+                {
+                    TowerTemplate tp = towerSpawner.GetComponent<TowerSpawner>().towerTemplate[i];
+                    Debug.Log(new_tower + "//" + tp.weapon[0].name);
+
+                    if (new_tower.Equals(tp.weapon[0].name))
+                    {
+                        Tile temp_tile = obj1.GetComponent<TowerWeapon>().ownerTile;
+                        temp_tile.IsBuildTower = false;
+                        Destroy(obj1);
+                        towerSpawner.GetComponent<TowerSpawner>().ReadyToSpawnTower(i);
+                        towerSpawner.GetComponent<TowerSpawner>().SpawnTower(temp_tile.transform);
+                        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV1");
+                        Debug.Log("타워 " + new_tower + "생성!!");
+
+                        result = true;
+                        break;
+                    }
+                }
+            }
+            //
+
+        }
+        return result;
+    }
+
     //레시피 확인 함수
     private string FindrRecipe(string input0, string input1)
     {

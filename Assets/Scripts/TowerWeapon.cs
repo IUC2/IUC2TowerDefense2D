@@ -83,12 +83,11 @@ public class TowerWeapon : MonoBehaviour
         this.towerSpawner = towerSpawner;
         this.enemySpawner = enemySpawner;
         this.ownerTile = ownerTile;
-
         ////최초 상태를 WeaponState.SearchTarget으로 설정
         //ChangeState(WeaponState.SearchTarget);
 
         //무기 속성이 캐논, 레이저일 때만 최초 상태를 Search로 변경하도록 함
-        if(weaponType == WeaponType.Cannon || weaponType == WeaponType.Laser)
+        if (weaponType == WeaponType.Cannon || weaponType == WeaponType.Laser)
         {
             //최초 상태를 WeaponState.SearchTarget으로 설정
             ChangeState(WeaponState.SearchTarget);
@@ -103,6 +102,11 @@ public class TowerWeapon : MonoBehaviour
         weaponState = newState;
         //새로운 상태 재생
         StartCoroutine(weaponState.ToString());
+    }
+
+    private void Awake()
+    {
+        gameObject.GetComponent<Animator>().SetFloat("reloadSpeed", 1 / (towerTemplate.weapon[level].rate - 0.0000001f));
     }
 
     private void Update()
@@ -245,15 +249,20 @@ public class TowerWeapon : MonoBehaviour
             if(IsPossibleToAttackTarget() == false)
             {
                 ChangeState(WeaponState.SearchTarget);
+                gameObject.GetComponent<Animator>().SetInteger("state", 1);
                 break;
             }
 
             //3. attackRate 시간만큼 대기
             //yield return new WaitForSeconds(attackRate);
-            yield return new WaitForSeconds(towerTemplate.weapon[level].rate);
 
-            //4. 공격(발사체 생성)
+            gameObject.GetComponent<Animator>().SetInteger("state", 1);
+            yield return new WaitForSeconds(towerTemplate.weapon[level].rate- 0.0000001f);
+            //4. 공격(발사체 생성) 
             SpawnEnemyBullet();
+            gameObject.GetComponent<Animator>().SetInteger("state", 2);
+            yield return new WaitForSeconds(0.0000001f);
+
         }
     }
 

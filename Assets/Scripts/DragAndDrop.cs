@@ -71,6 +71,9 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
                 {
                     //합체
                     Debug.Log("1단계 합체 구간");
+                    GameObject.Find("TowerManager").GetComponent<TowerManager>().TowerUpgrade2(mouseBtnUpHitTransform.gameObject, towerSpawner.towerTemplate[towerindex].weapon[0].name);
+                    
+
                 }
                 else if (mouseBtnUpHit.transform.CompareTag("Tile"))
                 {
