@@ -1,29 +1,86 @@
 {
-	"recipes":[
-		
+	"recipes": [
+
 		{
-			"input":["tower1","tower1"],
-			"output":"tower2"
+			"input": [ "tower1", "tower1" ],
+			"output": "tower2"
 		},
 		{
-			"input":["tower1","tower2"],
-			"output":"tower3"
+			"input": [ "tower1", "tower2" ],
+			"output": "tower3"
 		},
 		{
-			"input":["tower2","tower2"],
-			"output":"tower4"
+			"input": [ "tower2", "tower2" ],
+			"output": "tower4"
 		},
 		{
-			"input":["tower1","tower3"],
-			"output":"tower4"
+			"input": [ "tower1", "tower3" ],
+			"output": "tower4"
 		},
 		{
-			"input":["tower2","tool1"],
-			"output":"tower6"
+			"input": [ "tower2", "tool1" ],
+			"output": "tower6"
 		},
 		{
-			"input":["tower3","seasoning1"],
-			"output":"tower7"
+			"input": [ "tower3", "seasoning1" ],
+			"output": "tower7"
+		},
+		//여기서부터 음식타워 레시피
+		// 2단계 레시피 
+		{
+			"input": [ "tower_1_pork", "tool_fried" ], // 돼지고기 + 튀기기 = 돈까스
+			"output": "tower_2_pork_cutlet"
+		},
+		{
+			"input": [ "tower_1_shrimp", "tool_fried" ], // 새우 + 튀기기 = 새우튀김
+			"output": "tower_2_fried_shrimp"
+		},
+		{
+			"input": [ "tower_1_rice", "tool_steamed" ], // 쌀 + 찌기 = 밥
+			"output": "tower_2_rice"
+		},
+		{
+			"input": [ "tower_1_egg", "tool_roasted" ], // 계란 + 굽기 = 계란후라이
+			"output": "tower_2_fried_egg"
+		},
+		{
+			"input": [ "tower_1_bread", "tool_roasted" ], // 빵 + 굽기 = 토스트
+			"output": "tower_2_toast"
+		},
+		{
+			"input": [ "tower_1_noodle", "tool_boiled" ], // 면 + 삶기 = 국수
+			"output": "tower_2_noodle"
+		},
+		{
+			"input": [ "tower_1_fish", "tool_roasted" ], // 물고기 + 굽기 = 생선구이
+			"output": "tower_2_roasted_fish"
+		},
+		{
+			"input": [ "tower_1_beef", "tool_roasted" ], // 소고기 + 굽기 = 함박스테이크
+			"output": "tower_2_hamburg_steak"
+		},
+		{
+			"input": [ "tower_1_chicken", "tool_fried" ], // 닭고기 + 튀기기 = 치킨
+			"output": "tower_2_chicken"
+		},
+
+		// 3단계 타워
+		{
+			"input": [ "tower_2_rice", "tower_2_pork_cutlet" ], // 밥 + 돈까스 = 가츠동
+			"output": "tower_3_katsudon"
+		},
+		{
+			"input": [ "tower_2_rice", "tower_2_fried_egg" ], // 밥 + 계란후라이 = 계란밥
+			"output": "tower_3_egg_rice"
+		},
+		{
+			"input": [ "tower_2_toast", "tower_2_hamburg_steak" ], // 토스트 + 함박 스테이크 = 햄버거
+			"output": "tower_3_hamburger"
+		},
+		{
+			"input": [ "tower_2_fried_shrimp", "tower_2_toast" ], // 새우튀김 + 토스트 = 멘보샤
+			"output": "tower_3_menbosha"
 		}
+
 	]
 }
