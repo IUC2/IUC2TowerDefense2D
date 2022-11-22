@@ -82,6 +82,7 @@ public class EnemySpawner : MonoBehaviour
         if(type == EnemyDestroyType.kill)//적이 플레이어의 발사체에 사망했을 때
         {
             GameManager.gameManager.PlayerGold += gold;
+            GameManager.gameManager.CurrentScore += 1;
         }
         GameManager.gameManager.CurEnemyCount -= 1;
         //리스트에서 사망하는 적 정보 삭제

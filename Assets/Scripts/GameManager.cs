@@ -22,6 +22,12 @@ public class GameManager : MonoBehaviour
     private Image imageScreen;  //전체화면을 덮는 빨간색 이미지
     [SerializeField]
     private int playerGold = 10000;
+    [SerializeField]
+    private int currentScore = 0;
+    [SerializeField]
+    private int maxScore = 0;
+    [SerializeField]
+    private TextMeshProUGUI textCurrentScore;
 
     public bool ispaused = false;
     public int sec;
@@ -32,6 +38,18 @@ public class GameManager : MonoBehaviour
     {
         set => playerGold = Mathf.Max(0, value);
         get => playerGold;
+    }
+
+    public int CurrentScore//set & get이 가능한 Property 생성
+    {
+        set => currentScore = Mathf.Max(0, value);
+        get => currentScore;
+    }
+
+    public int MaxScore//set & get이 가능한 Property 생성
+    {
+        set => maxScore = Mathf.Max(0, value);
+        get => maxScore;
     }
 
     [SerializeField]
@@ -66,7 +84,7 @@ public class GameManager : MonoBehaviour
     {
         if (curEnemyCount > PlayerMaxHP)
         {
-
+            GameSave();
         }
         //StopCoroutine("HitAlphaAnimation");
         //StartCoroutine("HitAlphaAnimation");
@@ -101,8 +119,9 @@ public class GameManager : MonoBehaviour
         }
 
         textWave.text = waveSystem.CurrentWave.ToString();
-        textPlayerGold.text = GameManager.gameManager.PlayerGold.ToString();
-        textEnemyCount.text = GameManager.gameManager.CurEnemyCount + "/" + GameManager.gameManager.PlayerMaxHP;
+        textPlayerGold.text = playerGold.ToString();
+        textEnemyCount.text = curEnemyCount + "/" + playerMaxHP;
+        textCurrentScore.text = currentScore.ToString();
     }
     public void PuaseBtnOnClick()
     {
@@ -118,5 +137,22 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 2f;
         ispaused = false;
+    }
+    public void GameSave()
+    {
+        Debug.Log("저장");
+        maxScore = currentScore;
+        PlayerPrefs.SetInt("MaxScore", maxScore);
+        PlayerPrefs.Save();
+        currentScore = 0;
+    }
+    public void GameLoad()
+    {
+        if (!PlayerPrefs.HasKey("MaxScore"))
+        {
+            maxScore = 0;
+            return;
+        }
+        maxScore = PlayerPrefs.GetInt("MaxScore");
     }
 }
