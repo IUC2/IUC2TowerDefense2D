@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e875978e57358f74099d6adc37663eac, type: 3}
+  m_Name: tower_1_noodle
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 952108533741960680, guid: c01bd1ed24d25264fbc17f194a6dce67, type: 3}
+  follorTowerPrefab: {fileID: 5569805328247885498, guid: 40db0fa835c564a4793f27f685d5f8ee, type: 3}
+  weapon:
+  - sprite: {fileID: 21300000, guid: 98f08c7d0b7b59e4bac5cd0d7f9d2c09, type: 3}
+    name: tower_1_noodle
+    type: 
+    damage: 1
+    slow: 0
+    buff: 0
+    rate: 0.3
+    range: 2
+    cost: 50
+    buildingTime: 0
+    sell: 25
+  - sprite: {fileID: 21300000, guid: fce82680eddeffb43820ccbcd83c33ca, type: 3}
+    name: tower1
+    type: 
+    damage: 1.5
+    slow: 0
+    buff: 0
+    rate: 0.4
+    range: 2.3
+    cost: 100
+    buildingTime: 0
+    sell: 75
+  - sprite: {fileID: 21300000, guid: b5cb522c90d48d44f86dc734ea7d3031, type: 3}
+    name: tower1
+    type: 
+    damage: 2
+    slow: 0
+    buff: 0
+    rate: 0.3
+    range: 2.5
+    cost: 150
+    buildingTime: 0
+    sell: 150
