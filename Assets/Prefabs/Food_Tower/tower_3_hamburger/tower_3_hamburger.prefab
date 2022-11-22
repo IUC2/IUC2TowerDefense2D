@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 60ffb0647eb6adc4298919079ad3d81d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42a4a0c1a8dfa1f478b0d56ce11e29fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8336990607993774001}
   - component: {fileID: 408168925103465944}
   m_Layer: 7
-  m_Name: Tower
+  m_Name: tower_3_hamburger
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 331ce646075eeef448738b9ae5a0298a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c51709356f602714db56ec83f916f614, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -181,10 +181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c2d09b4c8aabf43ad371161f2a2602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerTemplate: {fileID: 11400000, guid: 0711156ab4196bd4898fb77b936b10b3, type: 2}
+  towerTemplate: {fileID: 11400000, guid: 1258239d008ec724e99d65ea65c438f3, type: 2}
   spawnPoint: {fileID: 9041171255210406762}
   weaponType: 0
-  bulletPrefab: {fileID: 4553121793603513684, guid: e6ca16c50c0f40d41962b8571b6f559f, type: 3}
+  bulletPrefab: {fileID: 4553121793603513684, guid: 121d08a029ebe1b4d91715944e4422dc, type: 3}
   lineRenderer: {fileID: 0}
   hitEffect: {fileID: 0}
   targetLayer:
@@ -325,7 +325,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b50f7770940882e41b0d952335727955, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55adda08b536e4d4ca82df778c5151db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
