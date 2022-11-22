@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -77,7 +78,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameManager);
+        //DontDestroyOnLoad(gameManager);
     }
 
     public void GameOver()
@@ -85,9 +86,12 @@ public class GameManager : MonoBehaviour
         if (curEnemyCount > PlayerMaxHP)
         {
             GameSave();
+
+            SceneManager.LoadScene("GameOver");
         }
         //StopCoroutine("HitAlphaAnimation");
         //StartCoroutine("HitAlphaAnimation");
+
     }
 
     //private IEnumerator HitAlphaAnimation()

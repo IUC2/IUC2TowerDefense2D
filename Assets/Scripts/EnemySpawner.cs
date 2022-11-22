@@ -41,6 +41,7 @@ public class EnemySpawner : MonoBehaviour
         //매개변수로 받아온 웨이브 정보 저장
         currentWave = wave;
         //현재 웨이브 시작
+
         StartCoroutine("SpawnEnemy");
     }
 
