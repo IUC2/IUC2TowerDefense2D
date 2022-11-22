@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\EnemyHPViewer.cs" />
     <Compile Include="Assets\Scripts\Movement2D.cs" />
     <Compile Include="Assets\Scripts\SliderPositionAutoSetter.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\UI_Scripts\GameStart.cs" />
     <Compile Include="Assets\Scripts\EnemyHP.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
