@@ -168,6 +168,7 @@ public class ObjectDetector : MonoBehaviour
                     {
                         Debug.Log("Enemy Clicked");
                         target.GetComponent<EnemyHP>().TakeDamage(0.5f);
+                        target.GetComponentInChildren<ParticleSystem>().Play();
                     }
                 }
             }
