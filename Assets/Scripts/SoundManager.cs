@@ -1,14 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEditor;
 using System;
+
 
 public class SoundManager : MonoBehaviour
 {
 
     [SerializeField]
     public GameObject SoundSources;
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            PlayAudio("BGM");
+        }
+        else if(SceneManager.GetActiveScene().name == "GameScene")
+        {
+        }
+        else if(SceneManager.GetActiveScene().name == "GameOver")
+        {
+
+        }
+        else
+        {
+
+        }
+    }
 
     public void PlayAudio(string audioClipName)
     {
