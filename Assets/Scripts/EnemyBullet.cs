@@ -36,7 +36,10 @@ public class EnemyBullet : MonoBehaviour
 
         //collision.GetComponent<Enemy>().OnDie();    //적 사망 함수 호출
         collision.GetComponent<EnemyHP>().TakeDamage(damage);
-
+        if (collision.GetComponentInChildren<ParticleSystem>() != null)
+        {
+            collision.GetComponentInChildren<ParticleSystem>().Play();
+        }
         Destroy(gameObject);                        //bullet 삭제
     }
 }
