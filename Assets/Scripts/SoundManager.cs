@@ -10,9 +10,6 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     public GameObject SoundSources;
 
-
-
-
     public void PlayAudio(string audioClipName)
     {
         GameObject gameObject = Instantiate(SoundSources.transform.Find(audioClipName).gameObject);
