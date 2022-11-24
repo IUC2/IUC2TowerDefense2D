@@ -168,6 +168,7 @@ public class ObjectDetector : MonoBehaviour
                     {
                         Debug.Log("Enemy Clicked");
                         target.GetComponent<EnemyHP>().TakeDamage(0.5f);
+                        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("TabTower2");
                         target.GetComponentInChildren<ParticleSystem>().Play();
                     }
                 }
