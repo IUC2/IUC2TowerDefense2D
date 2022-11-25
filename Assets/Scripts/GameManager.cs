@@ -142,6 +142,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 2f;
         ispaused = false;
     }
+    public void NextWave()
+    {
+        spawntime = 0;
+    }
+
     public void GameSave()
     {
         Debug.Log("ÀúÀå");
