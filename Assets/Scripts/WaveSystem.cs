@@ -17,14 +17,14 @@ public class WaveSystem : MonoBehaviour
 
     public void StartWave()
     {
-        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("WaveStart");
-        enemySpawner.StartWave(waves[Random.Range(0, MaxWave)]);
         bell.GetComponent<Animator>().SetTrigger("Bell");
+        enemySpawner.StartWave(waves[Random.Range(0, MaxWave)]);
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("WaveStart");
     }
 
     private void Update()
     {
-        if (GameManager.gameManager.spawntime < 0.1f)
+        if (GameManager.gameManager.spawntime <= 0f)
         {
             currentWaveIndex++;
             StartWave();

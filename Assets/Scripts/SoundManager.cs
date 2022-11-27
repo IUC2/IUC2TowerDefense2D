@@ -12,22 +12,32 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     public GameObject SoundSources;
 
+    public static SoundManager soundManager = null;
+    private void Awake()
+    {
+        if (soundManager == null)
+        {
+            soundManager = this;
+        }
+        else if (soundManager != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-            PlayAudio("BGM");
+           OnAudio("BGM");
         }
         else if(SceneManager.GetActiveScene().name == "GameScene")
         {
+            OnAudio("BGM");
         }
         else if(SceneManager.GetActiveScene().name == "GameOver")
         {
-
-        }
-        else
-        {
-
+            OnAudio("BGM");
         }
     }
 

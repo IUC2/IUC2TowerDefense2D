@@ -13,6 +13,7 @@ public class SliderPositionAutoSetter : MonoBehaviour
     {
         //Slider UI가 쫒아다닐 target 설정
         targetTransform = target;
+        
         //RectTransform 컴포넌트 정보 얻어오기
         rectTransform = GetComponent<RectTransform>();
     }

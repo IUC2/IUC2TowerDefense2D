@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class BGM : MonoBehaviour
 {
-    private static BGM instance = null;
-
+    public static BGM bgm = null;
     private void Awake()
     {
-        if(instance == null)
+        DontDestroyOnLoad(gameObject);
+        if (bgm == null)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            bgm = this;
         }
-        else
+        else if (bgm != this)
         {
-            if (instance != this)
-                Destroy(this.gameObject);
+            Destroy(gameObject);
         }
+    }
+    public void DestroyBGM()
+    {
+        Destroy(gameObject);
     }
 }
