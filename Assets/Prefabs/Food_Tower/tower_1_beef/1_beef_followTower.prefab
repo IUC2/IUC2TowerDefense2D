@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5569805328247885496}
   - component: {fileID: 5569805328247885497}
   m_Layer: 0
-  m_Name: Follow Tower
+  m_Name: 1_beef_followTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
