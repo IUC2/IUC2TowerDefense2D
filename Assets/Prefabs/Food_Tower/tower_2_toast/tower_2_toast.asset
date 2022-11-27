@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: tower_2_toast
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 952108533741960680, guid: 8b1d3bc746ec6bd41a8adc06a8f58660, type: 3}
-  follorTowerPrefab: {fileID: 5569805328247885498, guid: 40db0fa835c564a4793f27f685d5f8ee, type: 3}
+  follorTowerPrefab: {fileID: 5569805328247885498, guid: 1ca242e0b57dbf94fbb8aaf3228f8b1a, type: 3}
   weapon:
   - sprite: {fileID: 21300000, guid: 75ae4eefddd4ccf49be24126ec1f85b0, type: 3}
     name: tower_2_toast

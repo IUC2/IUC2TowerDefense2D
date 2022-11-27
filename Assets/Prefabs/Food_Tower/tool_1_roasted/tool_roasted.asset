@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e875978e57358f74099d6adc37663eac, type: 3}
-  m_Name: tool_1_roasted
+  m_Name: tool_roasted
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 952108533741960680, guid: 8fd5ce89a1673f34b9d30d00d0ecdde4, type: 3}
   follorTowerPrefab: {fileID: 5569805328247885498, guid: c4169cfd2fc59f94f833d0cee7b6939c, type: 3}

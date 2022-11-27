@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: tower_1_chicken
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 952108533741960680, guid: ef12c8333373aed4fbdde31e68a32e43, type: 3}
-  follorTowerPrefab: {fileID: 5569805328247885498, guid: 40db0fa835c564a4793f27f685d5f8ee, type: 3}
+  follorTowerPrefab: {fileID: 5569805328247885498, guid: 8fbab95959f3d9a4ebaf9c6570d4c2d4, type: 3}
   weapon:
   - sprite: {fileID: 21300000, guid: 4a9cf96ed9a78a942bd8182cfe30c090, type: 3}
     name: tower_1_chicken

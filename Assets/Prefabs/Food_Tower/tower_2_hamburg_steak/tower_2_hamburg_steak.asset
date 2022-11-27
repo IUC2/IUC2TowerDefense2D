@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: tower_2_hamburg_steak
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 952108533741960680, guid: 3ee75f154db14bb49b0d2ed1a28ae2e3, type: 3}
-  follorTowerPrefab: {fileID: 5569805328247885498, guid: 40db0fa835c564a4793f27f685d5f8ee, type: 3}
+  follorTowerPrefab: {fileID: 5569805328247885498, guid: 2f79dc6694e960f4fae160672df0f75c, type: 3}
   weapon:
   - sprite: {fileID: 21300000, guid: b7534e7c0a7c11a4b884731fafec1298, type: 3}
     name: tower_2_hamburg_steak

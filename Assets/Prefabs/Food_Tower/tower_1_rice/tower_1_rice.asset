@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e875978e57358f74099d6adc37663eac, type: 3}
   m_Name: tower_1_rice
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 952108533741960680, guid: 160acd21f096f1a4fa75a8872214ce53, type: 3}
-  follorTowerPrefab: {fileID: 5569805328247885498, guid: 40db0fa835c564a4793f27f685d5f8ee, type: 3}
+  towerPrefab: {fileID: 952108533741960680, guid: f4c3ba865d93894418b7d366a3f80c75, type: 3}
+  follorTowerPrefab: {fileID: 5569805328247885498, guid: eff7e4a59dcf23446bbb1e8a357dc679, type: 3}
   weapon:
   - sprite: {fileID: 21300000, guid: d884a5ecd42382249a35d205c840adb9, type: 3}
     name: tower_1_rice

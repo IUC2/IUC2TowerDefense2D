@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: tower_2_fried_shrimp
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 952108533741960680, guid: 854a4b82e683ad54e9229a6ec450a0ed, type: 3}
-  follorTowerPrefab: {fileID: 5569805328247885498, guid: 40db0fa835c564a4793f27f685d5f8ee, type: 3}
+  follorTowerPrefab: {fileID: 5569805328247885498, guid: 7ab87d9a9e0fd074ebaae3f34922a7e2, type: 3}
   weapon:
   - sprite: {fileID: 21300000, guid: 825e22c162f55464083ea4a8d0e75a49, type: 3}
     name: tower_2_fried_shrimp
