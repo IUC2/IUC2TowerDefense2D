@@ -72,7 +72,18 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(currentWave.spawnTime);//spawnTime 시간 동안 대기
             if (enemyList.Count >= 40)
             {
-                GameObject.Find("SoundManager").GetComponent<SoundManager>().OnAudio("people");
+                GameObject.Find("SoundManager").GetComponent<SoundManager>().OnAudio("tic2");
+                GameObject.Find("SoundManager").GetComponent<SoundManager>().OffAudio("tic1");
+            }
+            else if (enemyList.Count >= 30)
+            {
+                GameObject.Find("SoundManager").GetComponent<SoundManager>().OnAudio("tic1");
+                GameObject.Find("SoundManager").GetComponent<SoundManager>().OffAudio("tic2");
+            }
+            else
+            {
+                GameObject.Find("SoundManager").GetComponent<SoundManager>().OffAudio("tic1");
+                GameObject.Find("SoundManager").GetComponent<SoundManager>().OffAudio("tic2");
             }
         }
 
@@ -90,10 +101,21 @@ public class EnemySpawner : MonoBehaviour
         enemyList.Remove(enemy);
         //적 오브젝트 삭제
         Destroy(enemy.gameObject);
-        
-        if (enemyList.Count < 40)
+
+        if (enemyList.Count >= 40)
         {
-            GameObject.Find("SoundManager").GetComponent<SoundManager>().OffAudio("people");
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().OnAudio("tic2");
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().OffAudio("tic1");
+        }
+        else if (enemyList.Count >= 30)
+        {
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().OnAudio("tic1");
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().OffAudio("tic2");
+        }
+        else
+        {
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().OffAudio("tic1");
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().OffAudio("tic2");
         }
     }
 
