@@ -18555,15 +18555,85 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - spawnTime: 0.5
-    maxEnemyCount: 10
+    maxEnemyCount: 1
     enemyPrefabs:
     - {fileID: 7562702035787638707, guid: ae03cf65c00f47a47a0b4d2cc080ae2b, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 2
+    enemyPrefabs:
     - {fileID: 7562702035787638707, guid: 5d1ae9f817f1f254a8b379d4596b5439, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 3
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: cd298eaed0dbcca4fb5286410082505d, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 4
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: cca0c2a44ee0cd34bac149aec15685be, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 5
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: 06635936d3e4d2743a3d5213b1bf6007, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 6
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: e076717e5fdebfa448fcc6258ea4264a, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 7
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: f276b09dc3591544791465ac202c2cd9, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 8
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: 8ede358426d170b4cadce2d42c5936c0, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 9
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: 8caa975bab14ca54c8a87ec786b363cd, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 10
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: 9785bf6c20aea06438309e3ad3cb94b6, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 11
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: ae03cf65c00f47a47a0b4d2cc080ae2b, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 12
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: 5d1ae9f817f1f254a8b379d4596b5439, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 13
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: cd298eaed0dbcca4fb5286410082505d, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 14
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: cca0c2a44ee0cd34bac149aec15685be, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 15
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: 06635936d3e4d2743a3d5213b1bf6007, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 16
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: e076717e5fdebfa448fcc6258ea4264a, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 17
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: f276b09dc3591544791465ac202c2cd9, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 18
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: 8ede358426d170b4cadce2d42c5936c0, type: 3}
+  - spawnTime: 0.5
+    maxEnemyCount: 19
+    enemyPrefabs:
+    - {fileID: 7562702035787638707, guid: 8caa975bab14ca54c8a87ec786b363cd, type: 3}
   - spawnTime: 0.5
     maxEnemyCount: 20
     enemyPrefabs:
-    - {fileID: 7562702035787638707, guid: ae03cf65c00f47a47a0b4d2cc080ae2b, type: 3}
-    - {fileID: 7562702035787638707, guid: 5d1ae9f817f1f254a8b379d4596b5439, type: 3}
+    - {fileID: 7562702035787638707, guid: 8ede358426d170b4cadce2d42c5936c0, type: 3}
   enemySpawner: {fileID: 1789117748}
   bell: {fileID: 366278277}
 --- !u!1 &1790429510
