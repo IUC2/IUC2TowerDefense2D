@@ -10,6 +10,8 @@ public class WaveSystem : MonoBehaviour
     private EnemySpawner    enemySpawner;
     private int     currentWaveIndex = -1;      //현재 웨이브 인덱스
     public GameObject bell;
+    [SerializeField]
+    private int curWaveIndex = 0;
 
     //웨이브 정보 출력을 위한 Get 프로퍼티(현재 웨이브, 총 웨이브)
     public int CurrentWave => currentWaveIndex + 1;//시작이 0이기 때문에 1
@@ -18,8 +20,16 @@ public class WaveSystem : MonoBehaviour
     public void StartWave()
     {
         bell.GetComponent<Animator>().SetTrigger("Bell");
-        enemySpawner.StartWave(waves[Random.Range(0, MaxWave)]);
+        enemySpawner.StartWave(waves[curWaveIndex]);
         GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("WaveStart");
+        if (curWaveIndex < MaxWave)
+        {
+            curWaveIndex++;
+        }
+        else
+        {
+            curWaveIndex = 0;
+        }
     }
 
     private void Update()
