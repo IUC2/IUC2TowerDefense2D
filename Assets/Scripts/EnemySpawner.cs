@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
     private GameObject      enemyHPSliderPrefab;    //적 체력을 나타내는 SliderUI 프리팹
     [SerializeField]
     private Transform       canvasTransform;        //UI를 표현하는 Canvas 오브젝트의 Transform
+    [SerializeField]
+    private Transform       canvasTransform3;        //UI를 표현하는 Canvas 오브젝트의 Transform
     //[SerializeField]
     //private float           spawnTime;              //적 생성 주기
     [SerializeField]
@@ -125,7 +127,7 @@ public class EnemySpawner : MonoBehaviour
         GameObject sliderClone = Instantiate(enemyHPSliderPrefab);
         //Slider UI 오브젝트를 parent("Canvas" 오브젝트)의 자식으로 설정
         //TIP. UI는 캔버스의 자식오브젝트로 설정되어 있어야 화면에 보인다.
-        sliderClone.transform.SetParent(canvasTransform);
+        sliderClone.transform.SetParent(canvasTransform3);
         //계층 설정으로 바뀐 크기를 다시 (1,1,1)으로 설정
         sliderClone.transform.localScale = Vector3.one;
 
