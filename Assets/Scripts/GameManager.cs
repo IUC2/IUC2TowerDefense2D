@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
             textTime.text = string.Format("{0:D}",  int.Parse(Mathf.Floor(spawntime).ToString()));
         }
 
-        textWave.text = waveSystem.CurrentWave.ToString();
+        textWave.text = (waveSystem.CurrentWave + WaveSystem.waveSystem.offset).ToString();
         textPlayerGold.text = playerGold.ToString();
         textEnemyCount.text = curEnemyCount + "/" + playerMaxHP;
         textCurrentScore.text = currentScore.ToString();

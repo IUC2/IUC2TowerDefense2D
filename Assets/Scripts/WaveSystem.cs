@@ -10,8 +10,9 @@ public class WaveSystem : MonoBehaviour
     private EnemySpawner    enemySpawner;
     private int     currentWaveIndex = 0;      //현재 웨이브 인덱스
     public GameObject bell;
-    [SerializeField]
+    public int offset = 0;
 
+    [SerializeField]
     public static WaveSystem waveSystem = null;
     private void Awake()
     {
@@ -37,15 +38,16 @@ public class WaveSystem : MonoBehaviour
     {
         bell.GetComponent<Animator>().SetTrigger("Bell");
         //enemySpawner.StartWave(waves[Random.Range(0, MaxWave)]);
-        enemySpawner.StartWave(waves[CurrentWave]);
+        enemySpawner.StartWave(waves[currentWaveIndex]);
         GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("WaveStart");
-        if (CurrentWave < MaxWave)
+        if (currentWaveIndex < waves.Length - 1)
         {
-            CurrentWave++;
+            currentWaveIndex++;
         }
         else
         {
-            CurrentWave = 0;
+            currentWaveIndex = 0;
+            offset += 20;
         }
     }
 
@@ -53,7 +55,6 @@ public class WaveSystem : MonoBehaviour
     {
         if (GameManager.gameManager.spawntime <= 0f)
         {
-            currentWaveIndex++;
             StartWave();
             GameManager.gameManager.spawntime = 30;
         }
