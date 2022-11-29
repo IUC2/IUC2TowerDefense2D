@@ -106,7 +106,10 @@ public class TowerWeapon : MonoBehaviour
 
     private void Awake()
     {
-        gameObject.GetComponent<Animator>().SetFloat("reloadSpeed", 1 / (towerTemplate.weapon[level].rate - 0.0000001f));
+        if (weaponType == WeaponType.Cannon)
+        {
+            gameObject.GetComponent<Animator>().SetFloat("reloadSpeed", 1 / (towerTemplate.weapon[level].rate - 0.0000001f));
+        }
     }
 
     private void Update()

@@ -10,6 +10,8 @@ TagManager:
   - UIBtn
   - PlacedTower
   - SellPanel
+  - Audio
+  - AudioMusic
   layers:
   - Default
   - TransparentFX

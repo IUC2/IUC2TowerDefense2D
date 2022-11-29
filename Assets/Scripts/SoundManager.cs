@@ -9,6 +9,8 @@ using System;
 public class SoundManager : MonoBehaviour
 {
 
+    private float maxSound = 0.5f;
+
     [SerializeField]
     public GameObject SoundSources;
 
@@ -67,6 +69,26 @@ public class SoundManager : MonoBehaviour
         if (GameObject.Find(audioClipName + "(Clone)") != null && GameObject.Find(audioClipName + "(Clone)").GetComponent<AudioSource>().isPlaying)
         {
             GameObject.Find(audioClipName + "(Clone)").GetComponent<AudioSource>().Stop();
+        }
+    }
+    public void SetAudioMusicLevel()
+    {
+        float music = GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music;
+        //about music
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("AudioMusic"))
+        {
+            obj.GetComponent<AudioSource>().volume = maxSound* music;
+        }
+    }
+
+    public void SetAudioSoundLevel()
+    {
+        float sound = GameObject.Find("SoundInfo").GetComponent<SoundInfo>().sound;
+
+        //about sound
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Audio"))
+        {
+            obj.GetComponent<AudioSource>().volume = maxSound * sound;
         }
     }
 }
