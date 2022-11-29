@@ -15,8 +15,8 @@ MonoBehaviour:
   towerPrefab: {fileID: 952108533741960680, guid: 76825985b918c0d498c231864baf3d23, type: 3}
   follorTowerPrefab: {fileID: 5569805328247885498, guid: 904638f7fee61034ebe9ac1cdcf70771, type: 3}
   weapon:
-  - sprite: {fileID: 21300000, guid: 1e4037332c7b9174280f88eaead02287, type: 3}
-    name: tool_1_roasted
+  - sprite: {fileID: 21300000, guid: 5ef6871d2a126154a80684b169e1ed66, type: 3}
+    name: tool_steamed
     type: 
     damage: 1
     slow: 0
