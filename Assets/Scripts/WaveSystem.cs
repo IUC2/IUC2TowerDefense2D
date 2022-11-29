@@ -8,27 +8,44 @@ public class WaveSystem : MonoBehaviour
     private Wave[]          waves;              //현재 스테이지 모든 웨이브 정보
     [SerializeField]
     private EnemySpawner    enemySpawner;
-    private int     currentWaveIndex = -1;      //현재 웨이브 인덱스
+    private int     currentWaveIndex = 0;      //현재 웨이브 인덱스
     public GameObject bell;
     [SerializeField]
-    private int curWaveIndex = 0;
+
+    public static WaveSystem waveSystem = null;
+    private void Awake()
+    {
+        if (waveSystem == null)
+        {
+            waveSystem = this;
+        }
+        else if (waveSystem != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     //웨이브 정보 출력을 위한 Get 프로퍼티(현재 웨이브, 총 웨이브)
-    public int CurrentWave => currentWaveIndex + 1;//시작이 0이기 때문에 1
+    public int CurrentWave {
+        set => currentWaveIndex = Mathf.Max(0, value);//시작이 0이기 때문에 1
+        get => currentWaveIndex;
+    }
+
     public int MaxWave => waves.Length;
 
     public void StartWave()
     {
         bell.GetComponent<Animator>().SetTrigger("Bell");
-        enemySpawner.StartWave(waves[curWaveIndex]);
+        //enemySpawner.StartWave(waves[Random.Range(0, MaxWave)]);
+        enemySpawner.StartWave(waves[CurrentWave]);
         GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("WaveStart");
-        if (curWaveIndex < MaxWave)
+        if (CurrentWave < MaxWave)
         {
-            curWaveIndex++;
+            CurrentWave++;
         }
         else
         {
-            curWaveIndex = 0;
+            CurrentWave = 0;
         }
     }
 
