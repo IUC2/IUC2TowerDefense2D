@@ -24,7 +24,7 @@ MonoBehaviour:
     rate: 0.3
     range: 2
     cost: 50
-    buildingTime: 5
+    buildingTime: 0
     sell: 25
   - sprite: {fileID: 21300000, guid: fce82680eddeffb43820ccbcd83c33ca, type: 3}
     name: tower1
