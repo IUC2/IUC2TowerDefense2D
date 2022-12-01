@@ -66,7 +66,6 @@ public class TowerSpawner : MonoBehaviour
         //타워를 건설하기 때문에 해당 타일에 표시
         tile.IsBuildTower = true;
         //타워 건설에 필요한 골드만큼 감소
-        //playerGold.CurrentGold -= towerBuildGold;
         GameManager.gameManager.PlayerGold -= towerTemplate[towerType].weapon[0].cost;
         //선택한 타일의 위치에 타워 건설(타일보다 z = -1 위치에 배치) => 타워가 타일에 배치된 경우 타일보다 타워를 우선 선택할 수 있도록 함
         Vector3 position = tileTransform.position + Vector3.back;
