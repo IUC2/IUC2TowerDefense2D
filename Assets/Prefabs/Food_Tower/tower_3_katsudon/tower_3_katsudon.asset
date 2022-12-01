@@ -18,10 +18,10 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 2b16077cc50d90f4ca15fe363e23f06e, type: 3}
     name: tower_3_katsudon
     type: 
-    damage: 1
+    damage: 4
     slow: 0
     buff: 0
-    rate: 0.3
+    rate: 0.2
     range: 2
     cost: 50
     buildingTime: 5

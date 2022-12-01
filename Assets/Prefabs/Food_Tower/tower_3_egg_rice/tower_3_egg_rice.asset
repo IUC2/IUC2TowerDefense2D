@@ -18,10 +18,10 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 08fdba92979d292449f5978097409936, type: 3}
     name: tower_3_egg_rice
     type: 
-    damage: 1
+    damage: 6
     slow: 0
     buff: 0
-    rate: 0.3
+    rate: 0.4
     range: 2
     cost: 50
     buildingTime: 5

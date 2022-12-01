@@ -21,7 +21,7 @@ MonoBehaviour:
     damage: 1
     slow: 0
     buff: 0
-    rate: 0.3
+    rate: 1
     range: 2
     cost: 50
     buildingTime: 0

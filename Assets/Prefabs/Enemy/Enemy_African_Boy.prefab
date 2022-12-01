@@ -5046,7 +5046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b803f9cb8fb731540b098e3201e2c31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 0.9
   moveDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &7562702035787638710
 MonoBehaviour:
@@ -5060,7 +5060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b78bad530475f34ab81e429419d934b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 10
+  gold: 13
 --- !u!114 &-4730388071416044026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5073,7 +5073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88a2469d3ceaa042a6fd2999fb83de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
+  maxHP: 15
 --- !u!61 &-1709233733173894414
 BoxCollider2D:
   m_ObjectHideFlags: 0

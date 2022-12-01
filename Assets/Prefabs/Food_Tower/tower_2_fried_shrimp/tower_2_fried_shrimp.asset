@@ -18,10 +18,10 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 825e22c162f55464083ea4a8d0e75a49, type: 3}
     name: tower_2_fried_shrimp
     type: 
-    damage: 1
+    damage: 3
     slow: 0
     buff: 0
-    rate: 0.3
+    rate: 0.6
     range: 2
     cost: 50
     buildingTime: 5

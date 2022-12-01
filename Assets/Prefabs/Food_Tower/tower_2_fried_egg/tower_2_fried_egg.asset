@@ -18,10 +18,10 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 8009a0e9e7b51b64c8f6a548e1dc7739, type: 3}
     name: tower_2_fried_egg
     type: 
-    damage: 1
+    damage: 3
     slow: 0
     buff: 0
-    rate: 0.3
+    rate: 0.6
     range: 2
     cost: 50
     buildingTime: 5

@@ -18,7 +18,7 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: b14050430fe40444bb79ac8a76328469, type: 3}
     name: tower_3_menbosha
     type: 
-    damage: 1
+    damage: 5
     slow: 0
     buff: 0
     rate: 0.3

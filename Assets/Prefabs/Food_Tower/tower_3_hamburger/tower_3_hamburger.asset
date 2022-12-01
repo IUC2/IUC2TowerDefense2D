@@ -18,7 +18,7 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 55adda08b536e4d4ca82df778c5151db, type: 3}
     name: tower_3_hamburger
     type: 
-    damage: 1
+    damage: 5
     slow: 0
     buff: 0
     rate: 0.3
