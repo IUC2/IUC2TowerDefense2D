@@ -46,6 +46,7 @@ public class SoundManager : MonoBehaviour
     public void PlayAudio(string audioClipName)
     {
         GameObject gameObject = Instantiate(SoundSources.transform.Find(audioClipName).gameObject);
+        gameObject.GetComponent<AudioSource>().volume = maxSound * GameObject.Find("SoundInfo").GetComponent<SoundInfo>().sound;
         gameObject.GetComponent<AudioSource>().Play();
         Destroy(gameObject, (float)(gameObject.gameObject.GetComponent<AudioSource>().clip.length + 0.1));
     }
@@ -55,13 +56,17 @@ public class SoundManager : MonoBehaviour
         if(GameObject.Find(audioClipName+"(Clone)") == null)
         {
             GameObject gameObject = Instantiate(SoundSources.transform.Find(audioClipName).gameObject);
+            gameObject.GetComponent<AudioSource>().volume = maxSound * GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music;
             gameObject.GetComponent<AudioSource>().Play();
             gameObject.GetComponent<AudioSource>().loop=true;
         }
         else
         {
             if (!GameObject.Find(audioClipName + "(Clone)").GetComponent<AudioSource>().isPlaying)
+            {
+                GameObject.Find(audioClipName + "(Clone)").GetComponent<AudioSource>().volume = maxSound * GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music;
                 GameObject.Find(audioClipName + "(Clone)").GetComponent<AudioSource>().Play();
+            }
         }
     }
     public void OffAudio(string audioClipName)
@@ -73,22 +78,19 @@ public class SoundManager : MonoBehaviour
     }
     public void SetAudioMusicLevel()
     {
-        float music = GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music;
         //about music
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("AudioMusic"))
         {
-            obj.GetComponent<AudioSource>().volume = maxSound* music;
+            obj.GetComponent<AudioSource>().volume = maxSound* GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music;
         }
     }
 
     public void SetAudioSoundLevel()
     {
-        float sound = GameObject.Find("SoundInfo").GetComponent<SoundInfo>().sound;
-
         //about sound
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Audio"))
         {
-            obj.GetComponent<AudioSource>().volume = maxSound * sound;
+            obj.GetComponent<AudioSource>().volume = maxSound * GameObject.Find("SoundInfo").GetComponent<SoundInfo>().sound;
         }
     }
 }

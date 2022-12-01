@@ -59,5 +59,19 @@
 			"output": "tower_3_menbosha"
 		}
 
+	],
+	"seasonings": [
+		{
+			"name":"seasoning_sugar",
+			"stat":"attack_1.1"
+		},
+		{ 
+			"name":"seasoning_salt",
+			"stat":"speed_1.1"
+		},	
+		{
+			"name":"seasoning_soysauce",
+			"stat":"range_1.1"
+		}
 	]
 }

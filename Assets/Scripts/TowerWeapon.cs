@@ -10,13 +10,13 @@ public class TowerWeapon : MonoBehaviour
     //[Header(string)]: Inspector View에 표시되는 변수들을 용도별로 구분하기 위해 사용하는 어트리뷰트 string에 작성된 내용을 굵은 글씨로 표시
     [Header("Commons")]
     [SerializeField]
-    public TowerTemplate   towerTemplate;//타워 정보(공격력, 공격속도 등)
+    public TowerTemplate towerTemplate;//타워 정보(공격력, 공격속도 등)
     //[SerializeField]
     //private GameObject      enemyBulletPrefab01;//발사체 프리팹
     [SerializeField]
-    private Transform       spawnPoint;//발사체 생성 위치
+    private Transform spawnPoint;//발사체 생성 위치
     [SerializeField]
-    private WeaponType      weaponType;//무기 속성 설정
+    private WeaponType weaponType;//무기 속성 설정
 
     //[SerializeField]
     //private float           attackRate = 0.5f;//공격 속도
@@ -37,15 +37,15 @@ public class TowerWeapon : MonoBehaviour
     [SerializeField]
     private LayerMask targetLayer;//광선에 부딪히는 레이어 설정
 
-    private int             level = 0;//타워 레벨
-    private WeaponState     weaponState = WeaponState.SearchTarget;//타워 무기의 상태
-    private Transform       attackTarget = null;//공격 대상
-    private TowerSpawner    towerSpawner;
-    private EnemySpawner    enemySpawner;//게임에 존재하는 적 정보 획득용
-    private SpriteRenderer  spriteRenderer;//타워 오브젝트 이미지 변경용
-    
-    private float           addedDamage;//버프에 의해 추가된 데미지
-    private int             buffLevel;//버프를 받는지 여부 설정(0: 버프 X, 1 ~ 3: 받는 버프 레벨)
+    private int level = 0;//타워 레벨
+    private WeaponState weaponState = WeaponState.SearchTarget;//타워 무기의 상태
+    private Transform attackTarget = null;//공격 대상
+    private TowerSpawner towerSpawner;
+    private EnemySpawner enemySpawner;//게임에 존재하는 적 정보 획득용
+    private SpriteRenderer spriteRenderer;//타워 오브젝트 이미지 변경용
+
+    private float addedDamage;//버프에 의해 추가된 데미지
+    private int buffLevel;//버프를 받는지 여부 설정(0: 버프 X, 1 ~ 3: 받는 버프 레벨)
 
     public Tile ownerTile;//현재 타워가 배치되어 있는 타일
 
@@ -55,17 +55,21 @@ public class TowerWeapon : MonoBehaviour
     //public float AttackRange => attackRange;
 
     //TowerTemplate Property 생성
-    public Sprite       TowerSprite => towerTemplate.weapon[level].sprite;
-    public float        Damage      => towerTemplate.weapon[level].damage;
-    public float        Rate        => towerTemplate.weapon[level].rate;
-    public float        Range       => towerTemplate.weapon[level].range;
-    public int          UpgradeCost => Level < MaxLevel ? towerTemplate.weapon[level + 1].cost : 0;
-    public int          SellCost => towerTemplate.weapon[level].sell;
-    public int          Level       => level + 1;
-    public int          MaxLevel    => towerTemplate.weapon.Length;
-    public float        Slow        => towerTemplate.weapon[level].slow;
-    public float        Buff => towerTemplate.weapon[level].buff;
-    public WeaponType   WeaponType  => weaponType;
+    public Sprite TowerSprite => towerTemplate.weapon[level].sprite;
+    public float Damage = 1f;
+    public float Rate = 1f;
+    public float Range = 1f;
+    public int Damage_buff = 0;
+    public int Rate_buff = 0;
+    public int Range_buff = 0;
+    public int UpgradeCost => Level < MaxLevel ? towerTemplate.weapon[level + 1].cost : 0;
+    public int SellCost => towerTemplate.weapon[level].sell;
+    public int Level => level + 1;
+    public int MaxLevel => towerTemplate.weapon.Length;
+    public float Slow => towerTemplate.weapon[level].slow;
+    public float Buff => towerTemplate.weapon[level].buff;
+    public WeaponType WeaponType => weaponType;
+
     public float AddedDamage
     {
         set => addedDamage = Mathf.Max(0, value);
@@ -106,15 +110,18 @@ public class TowerWeapon : MonoBehaviour
 
     private void Awake()
     {
+        Damage = towerTemplate.weapon[level].damage;
+        Range = towerTemplate.weapon[level].range;
+        Rate = towerTemplate.weapon[level].rate;
         if (weaponType == WeaponType.Cannon)
         {
-            gameObject.GetComponent<Animator>().SetFloat("reloadSpeed", 1 / (towerTemplate.weapon[level].rate - 0.0000001f));
+            gameObject.GetComponent<Animator>().SetFloat("reloadSpeed", 1 / (Rate - 0.0000001f));
         }
     }
 
     private void Update()
     {
-        if(attackTarget != null)
+        if (attackTarget != null)
         {
             RotateToTarget();
         }
@@ -185,11 +192,11 @@ public class TowerWeapon : MonoBehaviour
         //제일 가까이 있는 적을 찾기 위해 최초 거리를 최대한 크게 설정
         float closestDistSqr = Mathf.Infinity;
         //EnemySpawnerr의 EnemyList에 있는 현재 맵에 존재하는 모든 적 검사
-        for(int i = 0; i < enemySpawner.EnemyList.Count; ++i)
+        for (int i = 0; i < enemySpawner.EnemyList.Count; ++i)
         {
             float distance = Vector3.Distance(enemySpawner.EnemyList[i].transform.position, transform.position);
             //현재 검사중인 적과의 거리가 공격범위 내에 있고, 현잮자ㅣ 검샇나 적보다 거리가 가까우면
-            if(distance <= towerTemplate.weapon[level].range && distance <= closestDistSqr)
+            if (distance <= Range && distance <= closestDistSqr)
             {
                 closestDistSqr = distance;
                 attackTarget = enemySpawner.EnemyList[i].transform;
@@ -201,13 +208,13 @@ public class TowerWeapon : MonoBehaviour
     private bool IsPossibleToAttackTarget()
     {
         //target이 있는지 검사 (다른 발사체에 의해 제거, Goal 지점까지 이동해 삭제 등)
-        if(attackTarget == null)
+        if (attackTarget == null)
         {
             return false;
         }
         //target이 공격 범위 안에 있는지 검사(공격 범위를 벗어나면 새로운 적 탐색)
         float distance = Vector3.Distance(attackTarget.position, transform.position);
-        if(distance > towerTemplate.weapon[level].range)
+        if (distance > Range)
         {
             attackTarget = null;
             return false;
@@ -238,7 +245,7 @@ public class TowerWeapon : MonoBehaviour
     //        //3. attackRate 시간만큼 대기
     //        //yield return new WaitForSeconds(attackRate);
     //        yield return new WaitForSeconds(towerTemplate.weapon[level].rate);
-            
+
     //        //4. 공격(발사체 생성)
     //        SpawnEnemyBullet();
     //    }
@@ -249,7 +256,7 @@ public class TowerWeapon : MonoBehaviour
         while (true)
         {
             //1. target을 공격하는게 가능한지 검사
-            if(IsPossibleToAttackTarget() == false)
+            if (IsPossibleToAttackTarget() == false)
             {
                 ChangeState(WeaponState.SearchTarget);
                 gameObject.GetComponent<Animator>().SetInteger("state", 1);
@@ -260,7 +267,7 @@ public class TowerWeapon : MonoBehaviour
             //yield return new WaitForSeconds(attackRate);
 
             gameObject.GetComponent<Animator>().SetInteger("state", 1);
-            yield return new WaitForSeconds(towerTemplate.weapon[level].rate- 0.0000001f);
+            yield return new WaitForSeconds(Rate - 0.0000001f);
             //4. 공격(발사체 생성) 
             SpawnEnemyBullet();
             gameObject.GetComponent<Animator>().SetInteger("state", 2);
@@ -308,20 +315,20 @@ public class TowerWeapon : MonoBehaviour
         //현재 맵에 배치된 "Tower" 태그를 가진 모든 오브젝트 탐색
         GameObject[] towers = GameObject.FindGameObjectsWithTag("PlacedTower");
 
-        for(int i = 0; i < towers.Length; ++i)
+        for (int i = 0; i < towers.Length; ++i)
         {
             TowerWeapon weapon = towers[i].GetComponent<TowerWeapon>();
 
             //이미 버프를 받고 있고, 현재 버프 타워의 레벨보다 높은 버프이면 패스
-            if(weapon.BuffLevel > level)
+            if (weapon.BuffLevel > level)
             {
                 continue;
             }
             //현재 버프 타워와 다른 타워의 거리를 검사해 범위 안에 타워가 있으면
-            if(Vector3.Distance(weapon.transform.position, transform.position) <= towerTemplate.weapon[level].range)
+            if (Vector3.Distance(weapon.transform.position, transform.position) <= Range)
             {
                 //공격이 가능한 캐논, 레이저 타워이면
-                if(weapon.WeaponType == WeaponType.Cannon || weapon.WeaponType == WeaponType.Laser)
+                if (weapon.WeaponType == WeaponType.Cannon || weapon.WeaponType == WeaponType.Laser)
                 {
                     //버프에 의해 공격력 증가
                     weapon.AddedDamage = weapon.Damage * (towerTemplate.weapon[level].buff);
@@ -342,13 +349,13 @@ public class TowerWeapon : MonoBehaviour
         //공격력 = 타워 기본 공격력 + 버프에 의해 추가된 공격력
         float damage = towerTemplate.weapon[level].damage + AddedDamage;
 
-        clone.GetComponent<EnemyBullet>().Setup(attackTarget, damage);
+        clone.GetComponent<EnemyBullet>().Setup(attackTarget, Damage);
     }
 
     private void SpawnLaser()
     {
         Vector3 direction = attackTarget.position - spawnPoint.position;
-        RaycastHit2D[] hit = Physics2D.RaycastAll(spawnPoint.position, direction, towerTemplate.weapon[level].range, targetLayer);
+        RaycastHit2D[] hit = Physics2D.RaycastAll(spawnPoint.position, direction, Range, targetLayer);
 
         //같은 방향으로 여러 개의 광선을 쏴서 그 중 현재 attackTarget과 동일한 오브젝트 검출
         for (int i = 0; i < hit.Length; ++i)
@@ -373,7 +380,7 @@ public class TowerWeapon : MonoBehaviour
     public bool Upgrade()
     {
         //타워 업그레이드에 필요한 골드가 충분한지 검사
-        if(GameManager.gameManager.PlayerGold < towerTemplate.weapon[level + 1].cost)
+        if (GameManager.gameManager.PlayerGold < towerTemplate.weapon[level + 1].cost)
         {
             return false;
         }
@@ -386,7 +393,7 @@ public class TowerWeapon : MonoBehaviour
         GameManager.gameManager.PlayerGold -= towerTemplate.weapon[level].cost;
 
         //무기 속성이 레이저라면
-        if(weaponType == WeaponType.Laser)
+        if (weaponType == WeaponType.Laser)
         {
             //레벨에 따라 레이저의 굵기 설정
             lineRenderer.startWidth = 0.02f + level * 0.05f;
