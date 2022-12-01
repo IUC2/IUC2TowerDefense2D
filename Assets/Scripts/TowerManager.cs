@@ -84,7 +84,7 @@ public class TowerManager : MonoBehaviour
                                 obj1.transform.position = temp_tile.transform.position;
                                 foreach (Sprite sp in foodSprites)
                                 {
-                                    if (tower2_name.Contains(sp.name.Split('_')[1]))
+                                    if (tower2_name.Substring(8).Equals(sp.name.Substring(5)))
                                     {
                                         obj1.transform.Find("food").GetComponent<SpriteRenderer>().sprite = sp;
                                         obj1.GetComponent<Animator>().SetInteger("state", 1);
@@ -101,7 +101,7 @@ public class TowerManager : MonoBehaviour
                                 obj2.transform.position = temp_tile.transform.position;
                                 foreach (Sprite sp in foodSprites)
                                 {
-                                    if (tower1_name.Contains(sp.name.Split('_')[1]))
+                                    if (tower1_name.Substring(8).Equals(sp.name.Substring(5)))
                                     {
                                         obj2.transform.Find("food").GetComponent<SpriteRenderer>().sprite = sp;
                                         obj2.GetComponent<Animator>().SetInteger("state", 1);
@@ -127,6 +127,14 @@ public class TowerManager : MonoBehaviour
                             Destroy(obj1);
                             Destroy(obj2);
                             GameObject wait_obj = Instantiate(wait_tower, temp_tile.transform);
+                            foreach (Sprite sp in foodSprites)
+                            {
+                                if (new_tower.Substring(8).Equals(sp.name.Substring(5)))
+                                {
+                                    wait_obj.transform.Find("food").GetComponent<SpriteRenderer>().sprite = sp;
+                                    break;
+                                }
+                            }
                             wait_obj.GetComponent<Animator>().SetFloat("waitTime", 1/tp.weapon[0].buildingTime);
                             StartCoroutine(spawnToewer(wait_obj, i, temp_tile, tp.weapon[0].buildingTime));
 
@@ -179,7 +187,7 @@ public class TowerManager : MonoBehaviour
                         {
                             foreach (Sprite sp in foodSprites)
                             {
-                                if (tower2_name.Contains(sp.name.Split('_')[1]))
+                                if (tower2_name.Substring(8).Equals(sp.name.Substring(5)))
                                 {
                                     obj1.transform.Find("food").GetComponent<SpriteRenderer>().sprite = sp;
                                     obj1.GetComponent<Animator>().SetInteger("state", 1);
@@ -195,7 +203,7 @@ public class TowerManager : MonoBehaviour
                             Destroy(obj1);
                             foreach (Sprite sp in foodSprites)
                             {
-                                if (tower1_name.Contains(sp.name.Split('_')[1]))
+                                if (tower1_name.Substring(8).Equals(sp.name.Substring(5)))
                                 {
                                     GameObject obj2_ref = null;
                                     for (int j = 0; j < towerSpawner.GetComponent<TowerSpawner>().towerTemplate.Length; j++)
