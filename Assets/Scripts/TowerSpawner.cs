@@ -17,7 +17,7 @@ public class TowerSpawner : MonoBehaviour
     public GameObject followTowerClone = null;//임시 타워 사용 완료 시 삭제를 위해 저장하는 변수
 
 
-    public bool ReadyToSpawnTower(int type)
+    public bool ReadyToSpawnTower(int type, bool isUpgrade)
     {
         towerType = type;
         //버튼을 중복해서 누르는 것을 방지하기 위해 필요
@@ -27,7 +27,7 @@ public class TowerSpawner : MonoBehaviour
         }
         //타워 건설 가능 여부 확인
         //타워를 건설할 만큼 돈이 없으면, 타워 건설 X
-        CheckMoney(true);
+        CheckMoney(!isUpgrade);
         //타워 건설 버튼을 눌렀다고 설정
         isOnTowerButton = true;
         //마우스를 따라다니는 임시 타워 생성
@@ -54,8 +54,12 @@ public class TowerSpawner : MonoBehaviour
         }
         return true;
     }
+    public void MinusMoney(int index)
+    {
+        GameManager.gameManager.PlayerGold -= towerTemplate[index].weapon[0].cost;
+    }
 
-    public GameObject SpawnTower(Transform tileTransform)
+    public GameObject SpawnTower(Transform tileTransform, bool isUpgrade)
     {
         if(isOnTowerButton == false)
         {
@@ -75,7 +79,10 @@ public class TowerSpawner : MonoBehaviour
         //타워를 건설하기 때문에 해당 타일에 표시
         tile.IsBuildTower = true;
         //타워 건설에 필요한 골드만큼 감소
-        GameManager.gameManager.PlayerGold -= towerTemplate[towerType].weapon[0].cost;
+        if (!isUpgrade)
+        {
+            GameManager.gameManager.PlayerGold -= towerTemplate[towerType].weapon[0].cost;
+        }
         //선택한 타일의 위치에 타워 건설(타일보다 z = -1 위치에 배치) => 타워가 타일에 배치된 경우 타일보다 타워를 우선 선택할 수 있도록 함
         Vector3 position = tileTransform.position + Vector3.back;
         //GameObject clone = Instantiate(towerPrefab, position, Quaternion.identity);

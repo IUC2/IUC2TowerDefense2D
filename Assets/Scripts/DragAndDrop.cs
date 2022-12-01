@@ -42,7 +42,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
             return;
         }
         isClicked = true;
-        towerSpawner.ReadyToSpawnTower(towerindex);
+        towerSpawner.ReadyToSpawnTower(towerindex, false);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -87,12 +87,13 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
                 {
                     //합체
                     Debug.Log("1단계 합체 구간");
-                    GameManager.gameManager.PlayerGold -= towerSpawner.towerTemplate[towerindex].weapon[0].cost;
+                    towerSpawner.CheckMoney(false);
+                    towerSpawner.MinusMoney(towerindex);
                     GameObject.Find("TowerManager").GetComponent<TowerManager>().TowerUpgrade2(mouseBtnUpHitTransform.gameObject, towerSpawner.towerTemplate[towerindex].weapon[0].name);
                 }
                 else if (mouseBtnUpHit.transform.CompareTag("Tile"))
                 {
-                    clickedTower = towerSpawner.SpawnTower(mouseBtnUpHitTransform);
+                    clickedTower = towerSpawner.SpawnTower(mouseBtnUpHitTransform, false);
                 }
                 else
                 {

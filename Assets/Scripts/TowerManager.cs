@@ -101,7 +101,7 @@ public class TowerManager : MonoBehaviour
                                         }
                                     }
                                     //yield return new WaitForSeconds(tp.weapon[0].buildingTime);
-                                    StartCoroutine(spawnToewer(obj1, i, temp_tile, tp.weapon[0].buildingTime));
+                                    StartCoroutine(spawnToewer(obj1, i, temp_tile, tp.weapon[0].buildingTime, true));
                                 }
                                 //tower1¿Ã Food tower2∞° Tool
                                 else
@@ -118,7 +118,7 @@ public class TowerManager : MonoBehaviour
                                         }
                                     }
                                     //yield return new WaitForSeconds(tp.weapon[0].buildingTime);
-                                    StartCoroutine(spawnToewer(obj2, i, temp_tile, tp.weapon[0].buildingTime));
+                                    StartCoroutine(spawnToewer(obj2, i, temp_tile, tp.weapon[0].buildingTime, true));
                                     //Destroy(obj1);
                                 }
 
@@ -145,7 +145,7 @@ public class TowerManager : MonoBehaviour
                                     }
                                 }
                                 wait_obj.GetComponent<Animator>().SetFloat("waitTime", 1 / tp.weapon[0].buildingTime);
-                                StartCoroutine(spawnToewer(wait_obj, i, temp_tile, tp.weapon[0].buildingTime));
+                                StartCoroutine(spawnToewer(wait_obj, i, temp_tile, tp.weapon[0].buildingTime, true));
 
                             }
 
@@ -201,7 +201,7 @@ public class TowerManager : MonoBehaviour
                                     {
                                         obj1.transform.Find("food").GetComponent<SpriteRenderer>().sprite = sp;
                                         obj1.GetComponent<Animator>().SetInteger("state", 1);
-                                        StartCoroutine(spawnToewer(obj1, i, temp_tile, tp.weapon[0].buildingTime));
+                                        StartCoroutine(spawnToewer(obj1, i, temp_tile, tp.weapon[0].buildingTime, true));
                                         break;
                                     }
                                 }
@@ -228,7 +228,7 @@ public class TowerManager : MonoBehaviour
                                         GameObject obj2 = Instantiate(obj2_ref, temp_tile.transform.position, new Quaternion(0, 0, 0, 0));
                                         obj2.transform.Find("food").GetComponent<SpriteRenderer>().sprite = sp;
                                         obj2.GetComponent<Animator>().SetInteger("state", 1);
-                                        StartCoroutine(spawnToewer(obj2, i, temp_tile, tp.weapon[0].buildingTime));
+                                        StartCoroutine(spawnToewer(obj2, i, temp_tile, tp.weapon[0].buildingTime, true));
                                         break;
                                     }
                                 }
@@ -253,13 +253,13 @@ public class TowerManager : MonoBehaviour
         }
         return result;
     }
-    private IEnumerator spawnToewer(GameObject obj, int i, Tile temp_tile, float time)
+    private IEnumerator spawnToewer(GameObject obj, int i, Tile temp_tile, float time, bool isUpgrade)
     {
         yield return new WaitForSeconds(time);
         Destroy(obj);
         temp_tile.IsBuildTower = false;
-        towerSpawner.GetComponent<TowerSpawner>().ReadyToSpawnTower(i);
-        towerSpawner.GetComponent<TowerSpawner>().SpawnTower(temp_tile.transform);
+        towerSpawner.GetComponent<TowerSpawner>().ReadyToSpawnTower(i, isUpgrade);
+        towerSpawner.GetComponent<TowerSpawner>().SpawnTower(temp_tile.transform, isUpgrade);
         yield break;
     }
 
