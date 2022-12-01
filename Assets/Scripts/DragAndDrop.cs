@@ -16,6 +16,7 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
     private RaycastHit mouseBtnUpHit;
     private Transform mouseBtnUpHitTransform = null;//마우스 픽킹으로 선택한 오브젝트 임시 저장
     private GameObject clickedTower = null;
+    public bool isClicked = false;
 
     [SerializeField]
     private Button button;
@@ -33,6 +34,14 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
         {
             return;
         }
+        if (!towerSpawner.CheckMoney(true))
+        {
+            towerSpawner.DestroyFollowTowerClone();
+            mouseBtnUpHitTransform = null;
+            isDragTime = 0f;
+            return;
+        }
+        isClicked = true;
         towerSpawner.ReadyToSpawnTower(towerindex);
     }
 
@@ -61,6 +70,13 @@ public class DragAndDrop : MonoBehaviour, IPointerUpHandler, IDragHandler, IPoin
         if (isDragTime >= 0.001f)
         {
             //Drag
+            if (!towerSpawner.CheckMoney(false))
+            {
+                towerSpawner.DestroyFollowTowerClone();
+                mouseBtnUpHitTransform = null;
+                isDragTime = 0f;
+                return;
+            }
             isDragTime = 0f;
             int layerMask = (-1) - (1 << LayerMask.NameToLayer("Tower"));  // Everything에서 Player 레이어만 제외하고 충돌 체크함
             mouseBtnUpRay = mainCamera.ScreenPointToRay(Input.mousePosition);

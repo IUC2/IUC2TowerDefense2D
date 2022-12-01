@@ -27,12 +27,7 @@ public class TowerSpawner : MonoBehaviour
         }
         //타워 건설 가능 여부 확인
         //타워를 건설할 만큼 돈이 없으면, 타워 건설 X
-        if (towerTemplate[towerType].weapon[0].cost > GameManager.gameManager.PlayerGold)
-        {
-            //골드가 부족해 타워 건설이 불가능하다 출력
-            SystemTextViewer.systemTextViewer.PrintText(SystemType.Money);
-            return false;
-        }
+        CheckMoney(true);
         //타워 건설 버튼을 눌렀다고 설정
         isOnTowerButton = true;
         //마우스를 따라다니는 임시 타워 생성
@@ -43,6 +38,20 @@ public class TowerSpawner : MonoBehaviour
         GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("click");
         StartCoroutine("OnTowerCancelSystem");
 
+        return true;
+    }
+
+    public bool CheckMoney(bool isText)
+    {
+        if (towerTemplate[towerType].weapon[0].cost > GameManager.gameManager.PlayerGold)
+        {
+            //골드가 부족해 타워 건설이 불가능하다 출력
+            if (isText)
+            {
+                SystemTextViewer.systemTextViewer.PrintText(SystemType.Money);
+            }
+            return false;
+        }
         return true;
     }
 

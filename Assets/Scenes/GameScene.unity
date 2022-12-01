@@ -2027,6 +2027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 1
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &214232620
 MonoBehaviour:
@@ -3793,6 +3794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 13
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &359119508
 MonoBehaviour:
@@ -4714,6 +4716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 9
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &461590194
 MonoBehaviour:
@@ -6012,6 +6015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 12
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &591689230
 MonoBehaviour:
@@ -7335,6 +7339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 3
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &679021530
 MonoBehaviour:
@@ -7473,6 +7478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 4
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &696332612
 MonoBehaviour:
@@ -8209,6 +8215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 10
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &751043883
 MonoBehaviour:
@@ -9301,6 +9308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 8
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &855096966
 MonoBehaviour:
@@ -9664,6 +9672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 0
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &877037194
 MonoBehaviour:
@@ -10370,6 +10379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 15
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &936720503
 MonoBehaviour:
@@ -13099,7 +13109,7 @@ MonoBehaviour:
   textEnemyCount: {fileID: 1344014458}
   enemySpawner: {fileID: 1789117748}
   imageScreen: {fileID: 0}
-  playerGold: 10000
+  playerGold: 200
   currentScore: 0
   maxScore: 0
   textCurrentScore: {fileID: 385022792}
@@ -15761,6 +15771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 14
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &1420288696
 MonoBehaviour:
@@ -16711,6 +16722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 6
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &1510540908
 MonoBehaviour:
@@ -16997,6 +17009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 5
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &1531271058
 MonoBehaviour:
@@ -17209,6 +17222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 7
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &1540618101
 MonoBehaviour:
@@ -18846,6 +18860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 2
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &1766792981
 MonoBehaviour:
@@ -20885,6 +20900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1377692509}
   towerindex: 11
+  isClicked: 0
   button: {fileID: 0}
 --- !u!114 &1903074934
 MonoBehaviour:
