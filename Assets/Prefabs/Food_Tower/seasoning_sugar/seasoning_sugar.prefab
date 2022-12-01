@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerTemplate: {fileID: 11400000, guid: 123956648bccea24c82896a5a2f2059e, type: 2}
   spawnPoint: {fileID: 0}
-  weaponType: 3
+  weaponType: 2
   bulletPrefab: {fileID: 0}
   lineRenderer: {fileID: 0}
   hitEffect: {fileID: 0}

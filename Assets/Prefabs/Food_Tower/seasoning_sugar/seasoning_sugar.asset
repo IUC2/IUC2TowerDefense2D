@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e875978e57358f74099d6adc37663eac, type: 3}
   m_Name: seasoning_sugar
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 952108533741960680, guid: 2fa17902837168845a54e51b89b28240, type: 3}
-  follorTowerPrefab: {fileID: 5569805328247885498, guid: e7562bc8bfe9e0049bff3171f0a71b17, type: 3}
+  towerPrefab: {fileID: 952108533741960680, guid: 11562c2429097cd4a8af9c7839840c00, type: 3}
+  follorTowerPrefab: {fileID: 5569805328247885498, guid: 22f50635ef617df4ead86c2130e4a027, type: 3}
   weapon:
   - sprite: {fileID: 21300000, guid: 6010ca712c4591247a3211f6abc22243, type: 3}
-    name: seasoning_soysauce
+    name: seasoning_sugar
     type: 
     damage: 0
     slow: 0
