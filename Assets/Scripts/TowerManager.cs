@@ -16,6 +16,8 @@ public class TowerManager : MonoBehaviour
     [SerializeField]
     public Sprite[] foodSprites;
     [SerializeField]
+    public GameObject wait_tower;
+    [SerializeField]
     public GameObject tower1;
     [SerializeField]
     public GameObject tower2;
@@ -42,25 +44,6 @@ public class TowerManager : MonoBehaviour
 
     }
 
-    [CustomEditor(typeof(TowerManager))]
-    public class PrepareSceneEditor : Editor
-    {
-        //임시테스트 버튼
-        public override void OnInspectorGUI()
-        {
-            DrawDefaultInspector();
-
-            TowerManager myScript = (TowerManager)target;
-            if (GUILayout.Button("TowerUpgrade Test"))
-            {
-                myScript.TowerUpgrade(myScript.tower1, myScript.tower2);
-            }
-            if (GUILayout.Button("FindrRecipe Test"))
-            {
-
-            }
-        }
-    }
 
     //타워 업그레이드 함수
     public bool TowerUpgrade(GameObject obj1, GameObject obj2) // 가만히 있는 타워가 obj1. 옯겨지는 타워가 obj2  (1 <- 2 2를 끌어서 1에 놓는 상황 즉 1번위치에 업그레이드 된 타워가 생성) 
@@ -88,7 +71,6 @@ public class TowerManager : MonoBehaviour
                         Tile temp_tile = obj1.GetComponent<TowerWeapon>().ownerTile;
                         obj2.GetComponent<TowerWeapon>().ownerTile.IsBuildTower = false;
 
-                        temp_tile.IsBuildTower = false;
 
                         //towerSpawner.GetComponent<TowerSpawner>().ReadyToSpawnTower(i);
                         //towerSpawner.GetComponent<TowerSpawner>().SpawnTower(temp_tile.transform);
@@ -110,7 +92,7 @@ public class TowerManager : MonoBehaviour
                                     }
                                 }
                                 //yield return new WaitForSeconds(tp.weapon[0].buildingTime);
-                                StartCoroutine(spawnToewer(obj2, i, temp_tile, tp.weapon[0].buildingTime));
+                                StartCoroutine(spawnToewer(obj1, i, temp_tile, tp.weapon[0].buildingTime));
                             }
                             //tower1이 Food tower2가 Tool
                             else
@@ -140,7 +122,14 @@ public class TowerManager : MonoBehaviour
                         
                         else if (new_tower.Split('_')[1].Equals("3"))
                         {
+
                             GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV3");
+                            Destroy(obj1);
+                            Destroy(obj2);
+                            GameObject wait_obj = Instantiate(wait_tower, temp_tile.transform);
+                            wait_obj.GetComponent<Animator>().SetFloat("waitTime", 1/tp.weapon[0].buildingTime);
+                            StartCoroutine(spawnToewer(wait_obj, i, temp_tile, tp.weapon[0].buildingTime));
+
                         }
                         
 
