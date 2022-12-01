@@ -138,6 +138,8 @@ public class TowerSpawner : MonoBehaviour
 
     public void SetDragPosition(Camera camera, GameObject gO)
     {
+        if (gO == null)
+            return;
         gO.SetActive(true);
         Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
         gO.transform.position = new Vector3(camera.ScreenToWorldPoint(position).x, camera.ScreenToWorldPoint(position).y, 0);
