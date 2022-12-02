@@ -57,6 +57,7 @@ public class SoundManager : MonoBehaviour
         {
             GameObject gameObject = Instantiate(SoundSources.transform.Find(audioClipName).gameObject);
             gameObject.GetComponent<AudioSource>().volume = maxSound * GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music;
+            
             gameObject.GetComponent<AudioSource>().Play();
             gameObject.GetComponent<AudioSource>().loop=true;
         }
@@ -65,6 +66,7 @@ public class SoundManager : MonoBehaviour
             if (!GameObject.Find(audioClipName + "(Clone)").GetComponent<AudioSource>().isPlaying)
             {
                 GameObject.Find(audioClipName + "(Clone)").GetComponent<AudioSource>().volume = maxSound * GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music;
+                 ///
                 GameObject.Find(audioClipName + "(Clone)").GetComponent<AudioSource>().Play();
             }
         }
@@ -93,4 +95,5 @@ public class SoundManager : MonoBehaviour
             obj.GetComponent<AudioSource>().volume = maxSound * GameObject.Find("SoundInfo").GetComponent<SoundInfo>().sound;
         }
     }
+   
 }

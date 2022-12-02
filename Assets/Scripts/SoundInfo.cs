@@ -5,9 +5,10 @@ using UnityEngine;
 public class SoundInfo : MonoBehaviour
 {
     public static SoundInfo snd = null;
-
     public float music;
     public float sound;
+    
+   
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);

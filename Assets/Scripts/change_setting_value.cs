@@ -9,8 +9,7 @@ public class change_setting_value : MonoBehaviour
     private Slider music;
     [SerializeField]
     private Slider sound;
-    [SerializeField]
-    private Slider light;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -29,5 +28,40 @@ public class change_setting_value : MonoBehaviour
     {
         SoundInfo.snd.music = music.value;
         SoundInfo.snd.sound = sound.value;
+    }
+    public void MusicDown()
+    {
+        if (GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music > 0.01)
+        {
+            GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music -= 0.1f;
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().SetAudioMusicLevel();
+        }
+    }
+
+    public void MusicUp()
+    {
+        if (GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music < 0.99)
+        {
+            GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music += 0.1f;
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().SetAudioMusicLevel();
+        }
+    }
+
+    public void SoundDown()
+    {
+        if (GameObject.Find("SoundInfo").GetComponent<SoundInfo>().sound > 0.01)
+        {
+            GameObject.Find("SoundInfo").GetComponent<SoundInfo>().sound -= 0.1f;
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().SetAudioSoundLevel();
+        }
+    }
+
+    public void SoundUp()
+    {
+        if (GameObject.Find("SoundInfo").GetComponent<SoundInfo>().sound < 0.99)
+        {
+            GameObject.Find("SoundInfo").GetComponent<SoundInfo>().sound += 0.1f;
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().SetAudioSoundLevel();
+        }
     }
 }
