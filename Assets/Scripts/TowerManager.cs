@@ -157,6 +157,18 @@ public class TowerManager : MonoBehaviour
                         }
                     }
                 }
+                else
+                {
+                    GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV3");
+                    Destroy(obj1);
+                    Destroy(obj2);
+
+                    obj2.GetComponent<TowerWeapon>().ownerTile.IsBuildTower = false;
+                    Tile temp_tile = obj1.GetComponent<TowerWeapon>().ownerTile;
+                    temp_tile.IsBuildTower = false;
+                    towerSpawner.GetComponent<TowerSpawner>().ReadyToSpawnTower(towerSpawner.GetComponent<TowerSpawner>().towerTemplate.Length-1, true);
+                    towerSpawner.GetComponent<TowerSpawner>().SpawnTower(temp_tile.transform, true);
+                }
                 //
             }
             else if ((tower1_name.Split('_')[0].Equals("tower") && tower2_name.Split('_')[0].Equals("seasoning")))
@@ -179,7 +191,7 @@ public class TowerManager : MonoBehaviour
             String tower1_name = obj1.GetComponent<TowerWeapon>().towerTemplate.weapon[0].name;
             if ((tower1_name.Split('_')[0].Equals("tower") && tower2_name.Split('_')[0].Equals("tower")) || (tower1_name.Split('_')[0].Equals("tool") && tower2_name.Split('_')[0].Equals("tower")) || (tower1_name.Split('_')[0].Equals("tower") && tower2_name.Split('_')[0].Equals("tool")))
             {
-
+                
                 string new_tower = FindrRecipe(tower1_name, tower2_name);
                 if (!new_tower.Equals("¶Ë"))
                 {
@@ -242,6 +254,16 @@ public class TowerManager : MonoBehaviour
                             break;
                         }
                     }
+                }
+                else
+                {
+                    GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV3");
+                    Destroy(obj1);
+
+                    Tile temp_tile = obj1.GetComponent<TowerWeapon>().ownerTile;
+                    temp_tile.IsBuildTower = false;
+                    towerSpawner.GetComponent<TowerSpawner>().ReadyToSpawnTower(towerSpawner.GetComponent<TowerSpawner>().towerTemplate.Length - 1, true);
+                    towerSpawner.GetComponent<TowerSpawner>().SpawnTower(temp_tile.transform, true);
                 }
                 //
             }
