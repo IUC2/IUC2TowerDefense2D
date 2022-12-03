@@ -7,7 +7,6 @@ public class SoundInfo : MonoBehaviour
     public static SoundInfo snd = null;
     public float music = 0.5f;
     public float sound = 0.5f;
-    
    
     private void Awake()
     {
