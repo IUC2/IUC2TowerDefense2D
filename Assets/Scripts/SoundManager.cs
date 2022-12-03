@@ -31,7 +31,7 @@ public class SoundManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
-           OnAudio("BGM");
+            OnAudio("BGM");
         }
         else if(SceneManager.GetActiveScene().name == "GameScene")
         {

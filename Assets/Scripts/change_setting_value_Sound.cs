@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class change_setting_value : MonoBehaviour
+public class change_setting_value_Sound : MonoBehaviour
 {
-    [SerializeField]
-    private Slider music;
     [SerializeField]
     private Slider sound;
    
@@ -14,37 +12,12 @@ public class change_setting_value : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        music.value = SoundInfo.snd.music;
         sound.value = SoundInfo.snd.sound;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void change_value()
     {
-        SoundInfo.snd.music = music.value;
         SoundInfo.snd.sound = sound.value;
-    }
-    public void MusicDown()
-    {
-        if (GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music > 0.01)
-        {
-            GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music -= 0.1f;
-            GameObject.Find("SoundManager").GetComponent<SoundManager>().SetAudioMusicLevel();
-        }
-    }
-
-    public void MusicUp()
-    {
-        if (GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music < 0.99)
-        {
-            GameObject.Find("SoundInfo").GetComponent<SoundInfo>().music += 0.1f;
-            GameObject.Find("SoundManager").GetComponent<SoundManager>().SetAudioMusicLevel();
-        }
     }
 
     public void SoundDown()
