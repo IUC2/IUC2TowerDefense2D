@@ -126,13 +126,12 @@ public class TowerManager : MonoBehaviour
                                 //towerSpawner.GetComponent<TowerSpawner>().ReadyToSpawnTower(i);
                                 //towerSpawner.GetComponent<TowerSpawner>().SpawnTower(temp_tile.transform);
 
-                                GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV2");
+                                //GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV2");
+                                GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudioTime("cooking", tp.weapon[0].buildingTime);
                             }
 
                             else if (new_tower.Split('_')[1].Equals("3"))
                             {
-
-                                GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV3");
                                 Destroy(obj1);
                                 Destroy(obj2);
                                 GameObject wait_obj = Instantiate(wait_tower, temp_tile.transform);
@@ -145,6 +144,7 @@ public class TowerManager : MonoBehaviour
                                     }
                                 }
                                 wait_obj.GetComponent<Animator>().SetFloat("waitTime", 1 / tp.weapon[0].buildingTime);
+                                GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudioTime("timer", tp.weapon[0].buildingTime);
                                 StartCoroutine(spawnToewer(wait_obj, i, temp_tile, tp.weapon[0].buildingTime, true));
 
                             }
@@ -159,9 +159,9 @@ public class TowerManager : MonoBehaviour
                 }
                 else
                 {
-                    GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV3");
                     Destroy(obj1);
                     Destroy(obj2);
+                    GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("cook_failed");
 
                     obj2.GetComponent<TowerWeapon>().ownerTile.IsBuildTower = false;
                     Tile temp_tile = obj1.GetComponent<TowerWeapon>().ownerTile;
@@ -247,7 +247,8 @@ public class TowerManager : MonoBehaviour
                             }
 
 
-                            GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV2");
+                            //GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV2");
+                            GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudioTime("cooking", tp.weapon[0].buildingTime);
                             Debug.Log("타워 " + new_tower + "생성!!");
 
                             result = true;
@@ -257,11 +258,12 @@ public class TowerManager : MonoBehaviour
                 }
                 else
                 {
-                    GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("UpgradeLV3");
+                    
                     Destroy(obj1);
 
                     Tile temp_tile = obj1.GetComponent<TowerWeapon>().ownerTile;
                     temp_tile.IsBuildTower = false;
+                    GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("cook_failed");
                     towerSpawner.GetComponent<TowerSpawner>().ReadyToSpawnTower(towerSpawner.GetComponent<TowerSpawner>().towerTemplate.Length - 1, true);
                     towerSpawner.GetComponent<TowerSpawner>().SpawnTower(temp_tile.transform, true);
                 }

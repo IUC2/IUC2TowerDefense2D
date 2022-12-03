@@ -50,6 +50,13 @@ public class SoundManager : MonoBehaviour
         gameObject.GetComponent<AudioSource>().Play();
         Destroy(gameObject, (float)(gameObject.gameObject.GetComponent<AudioSource>().clip.length + 0.1));
     }
+    public void PlayAudioTime(string audioClipName,float time)
+    {
+        GameObject gameObject = Instantiate(SoundSources.transform.Find(audioClipName).gameObject);
+        gameObject.GetComponent<AudioSource>().volume = maxSound * GameObject.Find("SoundInfo").GetComponent<SoundInfo>().sound;
+        gameObject.GetComponent<AudioSource>().Play();
+        Destroy(gameObject, time);
+    }
 
     public void OnAudio(string audioClipName)
     {
