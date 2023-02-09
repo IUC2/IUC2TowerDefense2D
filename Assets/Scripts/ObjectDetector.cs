@@ -23,6 +23,8 @@ public class ObjectDetector : MonoBehaviour
     private Transform       mouseBtnDownHitTransform = null;
     private Transform       mouseBtnUpHitTransform = null;
     private Vector3         saveVector;
+
+    int pointerID;
     
     private GameObject clickedTower = null;
 
@@ -33,6 +35,16 @@ public class ObjectDetector : MonoBehaviour
     private void Awake()
     {
         mainCamera = Camera.main;
+
+#if UNITY_EDITOR
+
+        pointerID = -1; //PC나 유니티 상에서는 -1
+
+#elif UNITY_IOS || UNITY_IPHONE || UNITY_ANDROID || UNITY_ANDROID_API
+
+        pointerID = 0;  // 휴대폰이나 이외에서 터치 상에서는 0 
+
+#endif
     }
 
     private void Update()
@@ -125,8 +137,10 @@ public class ObjectDetector : MonoBehaviour
                     else
                     {
                         Debug.Log("elsePointerUp");
+
                         //여기에서 원래 자리로 복귀하도록 설정
-                        if (EventSystem.current.IsPointerOverGameObject())
+
+                        if (EventSystem.current.IsPointerOverGameObject(pointerID))
                         {
                             //판매
                             clickedTower.GetComponent<TowerWeapon>().Sell();
@@ -175,5 +189,24 @@ public class ObjectDetector : MonoBehaviour
             }
             sellPanel.SetActive(false);
         }
+    }
+    public static bool IsPointerOverGameObject()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return true;
+        }
+        for(int i = 0; i < Input.touchCount; i++)
+        {
+            var touch = Input.GetTouch(i);
+            if(touch.phase == TouchPhase.Began)
+            {
+                if (EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
