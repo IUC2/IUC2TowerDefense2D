@@ -97,8 +97,8 @@
 |[강동현](https://github.com/hyeon23) | [이경민](https://github.com/kon-lkmisem) | [페비](https://github.com/febbyviolen) | [이상윤](https://github.com/sangyun00) | [강찬욱](https://github.com/chanwookK) |
 |:------------:|:------------:|:------------:|:------------:|:------------:|
 | <img src="https://avatars.githubusercontent.com/u/77566434?v=4" width=200px alt="강동현"/> | <img src="https://avatars.githubusercontent.com/u/81462418?v=4" width=200px alt="이경민"/> | <img src="https://avatars.githubusercontent.com/u/59020969?v=4" width=200px alt="페비"/> | <img src="https://avatars.githubusercontent.com/u/32294564?v=4" width=200px alt="이상윤"/> | <img src="https://avatars.githubusercontent.com/u/114604267?v=4" width=200px alt="강찬욱"/> |
-| **Team Lead** | **Sub Lead** | **Follower** | **Follower** | **Follower** |
-| PM / Game Client | Game Client | Designer | Game Client | Game Client |
+| **Team Leader** | **Sub Leader** | **Follower** | **Follower** | **Follower** |
+| PM / Game Client | Game Client / Designer | Artist | Game Client | Game Client |
 | InGame / UI | InGame | Asset Design | UI | Sound |
 
 
