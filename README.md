@@ -11,7 +11,7 @@
 
 ## 🎮 게임 소개 
 
--**KUC!(Konkuk University Cook!)** 은 산학협력프로젝트2 과목에소 **(주)블럭체인저**사와 협업해 제작한 **무한 웨이브 타워 디펜스 게임**입니다.
+-**KUC!(Konkuk University Cook!)** 은 **무한 웨이브 타워 조합 디펜스 게임**입니다.
 
 -아동 교육용으로 제작되었고, 언제 어디서나 가볍게 즐길 수 있는 **Hyper Casual Mobile Game**입니다.
 
