@@ -23,8 +23,6 @@
 
 -**실제 요리의 재료 조합 과정** 을 **타워 디펜스 게임**에 점목시켜 **레시피를 통한 타워 조합 시스템**을 개발했습니다.
 
-
-
 </br>
 
 ### 1. 게임 방법
@@ -39,18 +37,20 @@
 
 -타워/조리 도구/조미료를 동일한 위치에 겹쳐서 배치할 경우, 조합이 발생합니다.
 
--1. (레시피에 존재하는 조합 -> 조합 성공[타워 진화])
+-**레시피에 존재하는 조합 -> 조합 성공[타워 진화]**
 
--2. (레시피에 존재하지 않는 조합 -> 조합 실패[꽝 타워 or 괴식 타워 진화])
+-**레시피에 존재하지 않는 조합 -> 조합 실패[꽝 타워 or 괴식 타워 진화]**
 
-**1-2-2. 2단계 타워 조합**: 1단계 타워 + 조리 도구
+-**1-2-1. 2단계 타워 조합**: 1단계 타워 + 조리 도구
 
-**1-2-3. 3단계 타워 조합**: 2단계 타워 + 2단계 타워
+-**1-2-2. 3단계 타워 조합**: 2단계 타워 + 2단계 타워
 
 **[1-2. 타워 강화]**
+
 -조미료 탭에 조미료를 배치된 3단계 타워에 드래그해 타워의 스텟을 강화시킬 수 있습니다.
 
 **[1-3. 타워 판매]**
+
 -배치된 타워를 드래그시 생기는 아래 판매 탭으로 드래그하면 타워를 판매할 수 있습니다.
 
 </br>
@@ -94,9 +94,11 @@
 </br>
 
 ## 👥 참여 인원 및 역할 분담 👥
-| **Individual(기획, 디자인, 개발) |
-|:------------:|
-| <img src="https://avatars.githubusercontent.com/u/77566434?v=4" width=250px alt="강동현"/> |
-|[강동현](https://github.com/hyeon23) |
+|[강동현](https://github.com/hyeon23) | [이경민](https://github.com/kon-lkmisem) | [페비](https://github.com/febbyviolen) | [이상윤](https://github.com/sangyun00) | [강찬욱](https://github.com/chanwookK) |
+|:------------:|:------------:|:------------:|:------------:|:------------:|
+| <img src="https://avatars.githubusercontent.com/u/77566434?v=4" width=200px alt="강동현"/> | <img src="https://avatars.githubusercontent.com/u/81462418?v=4" width=200px alt="이경민"/> | <img src="https://avatars.githubusercontent.com/u/59020969?v=4" width=200px alt="페비"/> | <img src="https://avatars.githubusercontent.com/u/32294564?v=4" width=200px alt="이상윤"/> | <img src="https://avatars.githubusercontent.com/u/114604267?v=4" width=200px alt="강찬욱"/> |
+| **Team Lead** | **Sub Lead** | **Follower** | **Follower** | **Follower** |
+| PM / Game Client | Game Client | Designer | Game Client | Game Client |
+| InGame / UI | InGame | Asset Design | UI | Sound |
 
 
