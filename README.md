@@ -9,6 +9,15 @@
 
 </br>
 
+## 📼 KUC! Play Video
+<div align="center">
+  
+[![KUCook-KUC!(음식 조리 컨셉 조합 타워 디펜스)-PV](http://img.youtube.com/vi/v3zuCRLvjUo/0.jpg)](https://youtu.be/v3zuCRLvjUo=qs)</br>
+click here
+</div>
+
+</br>
+
 ## 🎮 게임 소개 
 
 -**KUC!(Konkuk University Cook!)** 은 **무한 웨이브 타워 조합 디펜스 게임**입니다.
